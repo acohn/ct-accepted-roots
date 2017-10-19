@@ -1,4 +1,6 @@
-package schema
+//go:generate go run loglist_gen.go -timeout 3
+
+package loglist
 
 import (
 	"encoding/base64"

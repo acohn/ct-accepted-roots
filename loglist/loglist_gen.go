@@ -1,5 +1,6 @@
-//go:generate go run generate.go -timeout 3
+
 // +build ignore
+
 package main
 
 import (
@@ -8,7 +9,7 @@ import (
 	"encoding/json"
 	"flag"
 	"github.com/acohn/ct-accepted-roots/httpclient"
-	"github.com/acohn/ct-accepted-roots/loglist/schema"
+	"github.com/acohn/ct-accepted-roots/loglist"
 	"github.com/acohn/ct-accepted-roots/sthutil"
 	"github.com/google/certificate-transparency-go/client"
 	"github.com/google/certificate-transparency-go/jsonclient"
@@ -37,7 +38,7 @@ func main() {
 	defer cancel()
 
 	//Grab each log list
-	knownLogs := make(map[schema.LogID]schema.Log)
+	knownLogs := make(map[loglist.LogID]loglist.Log)
 	logListUrls := strings.Split(*logListUrls, ",")
 
 	for _, listUrl := range logListUrls {
@@ -54,7 +55,7 @@ func main() {
 	}
 
 	//attempt to connect to each one
-	workingLogChan := make(chan schema.LogID, len(knownLogs))
+	workingLogChan := make(chan loglist.LogID, len(knownLogs))
 	wg := new(sync.WaitGroup)
 	for _, log := range knownLogs {
 		wg.Add(1)
@@ -66,7 +67,7 @@ func main() {
 		close(workingLogChan)
 	}()
 
-	working := new(schema.LogList)
+	working := new(loglist.LogList)
 
 	for logID := range workingLogChan {
 		working.Logs = append(working.Logs, knownLogs[logID])
@@ -92,10 +93,10 @@ func main() {
 
 }
 
-func outputGoFile(logs []schema.Log, urls []string, outputFile string) error {
+func outputGoFile(logs []loglist.Log, urls []string, outputFile string) error {
 
 	type allLogsGoTemplate struct {
-		Logs      []schema.Log
+		Logs      []loglist.Log
 		URLs      []string
 		Timestamp string
 	}
@@ -106,11 +107,9 @@ func outputGoFile(logs []schema.Log, urls []string, outputFile string) error {
 // using data from{{ range .URLs }}
 //  {{ . }}{{  end }}
 
-package main
+package loglist
 
-import "github.com/acohn/ct-accepted-roots/loglist/schema"
-
-var Logs = schema.LogList{Logs: []schema.Log{
+var Logs = loglist.LogList{Logs: []loglist.Log{
 {{ range .Logs }}{
 Key: "{{ .Key }}",
 Description: "{{ .Description }}", // {{.LogIDString}}
@@ -140,7 +139,7 @@ MaximumMergeDelay: {{ .MaximumMergeDelay }},
 	return err
 }
 
-func fetchAndParseLogList(ctx context.Context, url string, hc *http.Client) (*schema.LogList, error) {
+func fetchAndParseLogList(ctx context.Context, url string, hc *http.Client) (*loglist.LogList, error) {
 
 	resp, err := ctxhttp.Get(ctx, hc, url)
 	if err != nil {
@@ -152,7 +151,7 @@ func fetchAndParseLogList(ctx context.Context, url string, hc *http.Client) (*sc
 		log.Fatal(err)
 	}
 
-	logList := new(schema.LogList)
+	logList := new(loglist.LogList)
 	err = json.Unmarshal(listJSON, logList)
 	if err != nil {
 		log.Fatal(err)
@@ -161,7 +160,7 @@ func fetchAndParseLogList(ctx context.Context, url string, hc *http.Client) (*sc
 
 }
 
-func testLog(ctx context.Context, ctLog schema.Log, workingLogChan chan schema.LogID, wg *sync.WaitGroup, hc *http.Client) {
+func testLog(ctx context.Context, ctLog loglist.Log, workingLogChan chan loglist.LogID, wg *sync.WaitGroup, hc *http.Client) {
 	defer wg.Done()
 
 	logKey, err := ctLog.KeyDER()
