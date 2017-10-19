@@ -8,5 +8,5 @@ type Log struct {
 }
 
 type LogList struct {
-  Log []Log `json:"logs"`
+  Logs []Log `json:"logs"`
 }

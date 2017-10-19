@@ -8,4 +8,4 @@ package main
 
 import "github.com/acohn/ct-accepted-roots/loglist/schema"
 
-var Logs = []schema.Logs{}
+var Logs = []schema.Log{}

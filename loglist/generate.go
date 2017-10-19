@@ -1,4 +1,4 @@
-//go:generate go run generate.go -loglists https://www.gstatic.com/ct/log_list/all_logs_list.json,https://ct.grahamedgecombe.com/logs.json
+//go:generate go run generate.go -log_list_urls https://www.gstatic.com/ct/log_list/all_logs_list.json,https://ct.grahamedgecombe.com/logs.json
 // +build ignore
 package main
 
@@ -7,6 +7,7 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"flag"
+	"github.com/acohn/ct-accepted-roots/httpclient"
 	"github.com/acohn/ct-accepted-roots/loglist/schema"
 	"github.com/google/certificate-transparency-go/client"
 	"github.com/google/certificate-transparency-go/jsonclient"
@@ -14,32 +15,32 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
-	"net/url"
 	"strings"
 	"sync"
 	"time"
 )
 
-var loglists = flag.String("loglists", "https://ct.grahamedgecombe.com/logs.json,https://www.gstatic.com/ct/log_list/all_logs_list.json", "Comma-separated list of log URLs")
+var logListUrls = flag.String("log_list_urls", "https://ct.grahamedgecombe.com/logs.json,https://www.gstatic.com/ct/log_list/all_logs_list.json", "Comma-separated list of log URLs")
 
 func main() {
-	knownLogs := make(map[logid.LogID]schema.Logs)
-
 	flag.Parse()
-	//Grab each log list
-	loglists := strings.Split(*loglists, ",")
+	httpCl, err := httpclient.Build()
+	if err != nil {
+		log.Fatal("Could not build HTTP client")
+	}
 
-	for _, listUrl := range loglists {
-		logList, err := fetchAndParseLogList(listUrl)
+	//Grab each log list
+	knownLogs := make(map[logid.LogID]schema.Log)
+	logListUrls := strings.Split(*logListUrls, ",")
+
+	for _, listUrl := range logListUrls {
+		logList, err := fetchAndParseLogList(listUrl, httpCl)
 		if err != nil {
 			log.Fatal(err)
 		}
 		for _, log := range logList.Logs {
-			if logurl, err := url.Parse(log.Url); err == nil {
-				if logurl.Scheme == "" {
-					logurl.Scheme = "https"
-				}
-				log.Url = logurl.String()
+			if !strings.HasPrefix(log.Url, "http") {
+				log.Url = "https://" + log.Url
 			}
 			logID := logid.FromPubKeyB64OrDie(log.Key)
 			knownLogs[logID] = log
@@ -51,8 +52,7 @@ func main() {
 	wg := new(sync.WaitGroup)
 	for logID, log := range knownLogs {
 		wg.Add(1)
-		//log, logID := log, logID //Make copies so the goroutine doesn't get stale versions
-		go testLog(log, logID, workingLogChan, wg)
+		go testLog(log, logID, workingLogChan, wg, httpCl)
 	}
 
 	go func() {
@@ -60,14 +60,14 @@ func main() {
 		close(workingLogChan)
 	}()
 
-	workingLogs := []schema.Logs{}
+	workingLogs := []schema.Log{}
 
 	for logID := range workingLogChan {
 		workingLogs = append(workingLogs, knownLogs[logID])
 	}
 
 	//for the ones that succeed, write to the all_logs.json file
-	newJson, err := json.MarshalIndent(schema.Root{Logs: workingLogs}, "", "    ")
+	newJson, err := json.MarshalIndent(schema.LogList{Logs: workingLogs}, "", "    ")
 	if err != nil {
 		log.Fatal(err)
 
@@ -75,9 +75,9 @@ func main() {
 	err = ioutil.WriteFile("all_logs.json", newJson, 0777)
 }
 
-func fetchAndParseLogList(url string) (*schema.Root, error) {
+func fetchAndParseLogList(url string, hc *http.Client) (*schema.LogList, error) {
 
-	resp, err := http.Get(url)
+	resp, err := hc.Get(url)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -87,7 +87,7 @@ func fetchAndParseLogList(url string) (*schema.Root, error) {
 		log.Fatal(err)
 	}
 
-	logList := new(schema.Root)
+	logList := new(schema.LogList)
 	err = json.Unmarshal(listJSON, logList)
 	if err != nil {
 		log.Fatal(err)
@@ -96,7 +96,7 @@ func fetchAndParseLogList(url string) (*schema.Root, error) {
 
 }
 
-func testLog(ctLog schema.Logs, logID logid.LogID, workingLogChan chan logid.LogID, wg *sync.WaitGroup) {
+func testLog(ctLog schema.Log, logID logid.LogID, workingLogChan chan logid.LogID, wg *sync.WaitGroup, hc *http.Client) {
 	defer wg.Done()
 	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second) //Only give a log five seconds to get back to us
 	defer cancel()
@@ -106,7 +106,7 @@ func testLog(ctLog schema.Logs, logID logid.LogID, workingLogChan chan logid.Log
 		log.Printf("Failed to decode log key for log %v - this should not happen", ctLog.Url)
 		return
 	}
-	client, err := client.New(ctLog.Url, nil, jsonclient.Options{PublicKeyDER: logKey})
+	client, err := client.New(ctLog.Url, hc, jsonclient.Options{PublicKeyDER: logKey})
 	if err != nil {
 		log.Printf("Could not create a new log client for log %v", ctLog.Url)
 		return
