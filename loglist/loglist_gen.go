@@ -109,11 +109,11 @@ func outputGoFile(logs []loglist.Log, urls []string, outputFile string) error {
 
 package loglist
 
-var Logs = loglist.LogList{Logs: []loglist.Log{
+var Logs = LogList{Logs: []Log{
 {{ range .Logs }}{
 Key: "{{ .Key }}",
-Description: "{{ .Description }}", // {{.LogIDString}}
-Url: "{{ .Url }}",
+Description: {{ printf "%#v" .Description }}, // {{.LogIDString}}
+Url: {{ printf "%#v" .Url }},
 MaximumMergeDelay: {{ .MaximumMergeDelay }},
 },
 {{ end }}}}
