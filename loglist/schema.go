@@ -4,9 +4,12 @@ package loglist
 
 import (
 	"encoding/base64"
+	"github.com/google/certificate-transparency-go/client"
+	"github.com/google/certificate-transparency-go/jsonclient"
 	"github.com/google/certificate-transparency-go/logid"
 	"sort"
 	"strings"
+	"net/http"
 )
 
 type Log struct {
@@ -34,6 +37,18 @@ func (l Log) LogIDString() string {
 
 func (l Log) KeyDER() ([]byte, error) {
 	return base64.StdEncoding.DecodeString(l.Key)
+}
+
+func (l Log) Client(hc *http.Client) (*client.LogClient, error) {
+	logKey, err := l.KeyDER()
+	if err != nil {
+		return nil, err
+	}
+	logcli, err := client.New(l.Url, hc, jsonclient.Options{PublicKeyDER: logKey})
+	if err != nil {
+		return nil, err
+	}
+	return logcli, nil
 }
 
 type LogList struct {

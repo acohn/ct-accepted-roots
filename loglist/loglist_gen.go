@@ -11,8 +11,6 @@ import (
 	"github.com/acohn/ct-accepted-roots/httpclient"
 	"github.com/acohn/ct-accepted-roots/loglist"
 	"github.com/acohn/ct-accepted-roots/sthutil"
-	"github.com/google/certificate-transparency-go/client"
-	"github.com/google/certificate-transparency-go/jsonclient"
 	"go/format"
 	"golang.org/x/net/context/ctxhttp"
 	"io/ioutil"
@@ -163,12 +161,7 @@ func fetchAndParseLogList(ctx context.Context, url string, hc *http.Client) (*lo
 func testLog(ctx context.Context, ctLog loglist.Log, workingLogChan chan loglist.LogID, wg *sync.WaitGroup, hc *http.Client) {
 	defer wg.Done()
 
-	logKey, err := ctLog.KeyDER()
-	if err != nil {
-		log.Printf("Failed to decode log key for log %v - this should not happen", ctLog.Url)
-		return
-	}
-	client, err := client.New(ctLog.Url, hc, jsonclient.Options{PublicKeyDER: logKey})
+	client, err := ctLog.Client(hc)
 	if err != nil {
 		log.Printf("Could not create a new log client for log %v", ctLog.Url)
 		return
