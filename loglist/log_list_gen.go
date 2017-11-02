@@ -1,4 +1,3 @@
-
 // +build ignore
 
 package main
@@ -107,14 +106,14 @@ func outputGoFile(logs []loglist.Log, urls []string, outputFile string) error {
 
 package loglist
 
-var Logs = LogList{Logs: []Log{
+var Logs = []Log{
 {{ range .Logs }}{
 Key: "{{ .Key }}",
 Description: {{ printf "%#v" .Description }}, // {{.LogIDString}}
 Url: {{ printf "%#v" .Url }},
 MaximumMergeDelay: {{ .MaximumMergeDelay }},
 },
-{{ end }}}}
+{{ end }}}
 `
 
 	allLogsGo := &allLogsGoTemplate{logs, urls, time.Now().UTC().Format(time.RFC1123)}

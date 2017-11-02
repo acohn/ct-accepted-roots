@@ -7,6 +7,12 @@
             "url": "https://ct.googleapis.com/logs/argon2017/"
         },
         {
+            "description": "Cloudflare Nimbus 2018",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEAsVpWvrH3Ke0VRaMg9ZQoQjb5g/xh1z3DDa6IuxY5DyPsk6brlvrUNXZzoIg0DcvFiAn2kd6xmu4Obk5XA/nRg==",
+            "maximum_merge_delay": 86400,
+            "url": "https://ct.cloudflare.com/logs/nimbus2018"
+        },
+        {
             "description": "Comodo 'Dodo' CT log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAELPXCMfVjQ2oWSgrewu4fIW4Sfh3lco90CwKZ061pvAI1eflh6c8ACE90pKM0muBDHCN+j0HV7scco4KKQPqq4A==",
             "maximum_merge_delay": 86400,
@@ -49,6 +55,12 @@
             "url": "https://sirius.ws.symantec.com/"
         },
         {
+            "description": "Cloudflare Nimbus 2017",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE15ypB40iQe6ToFJB2vSA8CW86/rzPNJ+kdg/LNpRvcjuKnLj/xhW5DoiDyI8xtUws5toLqtWwkFf1mRXFLFarw==",
+            "maximum_merge_delay": 86400,
+            "url": "https://ct.cloudflare.com/logs/nimbus2017"
+        },
+        {
             "description": "Google 'Daedalus' log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEbgwcuu4rakGFYB17fqsILPwMCqUIsz7VcCTRbR0ttrfzizbcI02VYxK75IaNzOnR7qFAot8LowYKMMqNrKQpVg==",
             "maximum_merge_delay": 604800,
@@ -73,6 +85,12 @@
             "url": "https://ctlog.wosign.com/"
         },
         {
+            "description": "Cloudflare Nimbus 2021",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAExpon7ipsqehIeU1bmpog9TFo4Pk8+9oN8OYHl1Q2JGVXnkVFnuuvPgSo2Ep+6vLffNLcmEbxOucz03sFiematg==",
+            "maximum_merge_delay": 86400,
+            "url": "https://ct.cloudflare.com/logs/nimbus2021"
+        },
+        {
             "description": "Comodo 'Sabre' CT log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE8m/SiQ8/xfiHHqtls9m7FyOMBg4JVZY9CgiixXGz0akvKD6DEL8S0ERmFe9U4ZiA0M4kbT5nmuk3I85Sk4bagA==",
             "maximum_merge_delay": 86400,
@@ -83,6 +101,12 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEAkbFvhu7gkAW6MHSrBlpE1n4+HCFRkC5OLAjgqhkTH+/uzSfSl8ois8ZxAD2NgaTZe1M9akhYlrYkes4JECs6A==",
             "maximum_merge_delay": 86400,
             "url": "https://ct1.digicert-ct.com/log/"
+        },
+        {
+            "description": "Cloudflare Nimbus 2020",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE01EAhx4o0zPQrXTcYjgCt4MVFsT0Pwjzb1RwrM0lhWDlxAYPP6/gyMCXNkOn/7KFsjL7rwk78tHMpY8rXn8AYg==",
+            "maximum_merge_delay": 86400,
+            "url": "https://ct.cloudflare.com/logs/nimbus2020"
         },
         {
             "description": "Google 'Argon2019' log",
@@ -101,6 +125,12 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzVH/qe+rgr/Mo+owQ00I6aegDSjHttgqQBmg+hBdTXXLgJT/+8LdSgjfY/8lOBtfivndJzQlTNQ9Le1cU6wXNQ==",
             "maximum_merge_delay": 86400,
             "url": "https://log.gdca.com.cn"
+        },
+        {
+            "description": "Cloudflare Nimbus 2019",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEkZHz1v5r8a9LmXSMegYZAg4UW+Ug56GtNfJTDNFZuubEJYgWf4FcC5D+ZkYwttXTDSo4OkanG9b3AI4swIQ28g==",
+            "maximum_merge_delay": 86400,
+            "url": "https://ct.cloudflare.com/logs/nimbus2019"
         },
         {
             "description": "DigiCert Log Server 2",

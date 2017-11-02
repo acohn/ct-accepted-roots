@@ -1,4 +1,4 @@
-//go:generate go run loglist_gen.go -timeout 3
+//go:generate go run all_logs_gen.go -timeout 3
 
 package loglist
 
@@ -7,9 +7,9 @@ import (
 	"github.com/google/certificate-transparency-go/client"
 	"github.com/google/certificate-transparency-go/jsonclient"
 	"github.com/google/certificate-transparency-go/logid"
+	"net/http"
 	"sort"
 	"strings"
-	"net/http"
 )
 
 type Log struct {
