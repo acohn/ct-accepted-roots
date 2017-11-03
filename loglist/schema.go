@@ -1,4 +1,4 @@
-//go:generate go run all_logs_gen.go -timeout 3
+//go:generate go run log_list_gen.go -timeout 15
 
 package loglist
 
@@ -44,7 +44,11 @@ func (l Log) Client(hc *http.Client) (*client.LogClient, error) {
 	if err != nil {
 		return nil, err
 	}
-	logcli, err := client.New(l.Url, hc, jsonclient.Options{PublicKeyDER: logKey})
+	url := l.Url
+	if !strings.HasPrefix(url, "https://") {
+		url = "https://" + url
+	}
+	logcli, err := client.New(url, hc, jsonclient.Options{PublicKeyDER: logKey})
 	if err != nil {
 		return nil, err
 	}
