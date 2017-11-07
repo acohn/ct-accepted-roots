@@ -145,6 +145,12 @@
             "url": "ctlog.gdca.com.cn"
         },
         {
+            "description": "WoTrus 3",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEeZDnIspLwTkFAVMsbCuu2GExJLQsj17+IyI6Gcc2u1kCMBbl6NSi3bAPSmkRVCnIvpkFy70Lk3fVdNEhvCXOoQ==",
+            "maximum_merge_delay": 86400,
+            "url": "ctlog3.wotrus.com"
+        },
+        {
             "description": "WoTrus",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEe9de7LmmJcJERiLqoBniAD+XENbtmVNjeOhtaK/DF7s8jvp0why9powt4pKSkaZdWO/mjhGWIblq/k4D0gXoSg==",
             "maximum_merge_delay": 86400,
@@ -185,12 +191,6 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE9UV9+jO2MCTzkabodO2F7LM03MUBc8MrdAtkcW6v6GA9taTTw9QJqofm0BbdAsbtJL/unyEf0zIkRgXjjzaYqQ==",
             "maximum_merge_delay": 86400,
             "url": "plausible.ct.nordu.net"
-        },
-        {
-            "description": "Venafi log",
-            "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAolpIHxdSlTXLo1s6H1OCdpSj/4DyHDc8wLG9wVmLqy1lk9fz4ATVmm+/1iN2Nk8jmctUKK2MFUtlWXZBSpym97M7frGlSaQXUWyA3CqQUEuIJOmlEjKTBEiQAvpfDjCHjlV2Be4qTM6jamkJbiWtgnYPhJL6ONaGTiSPm7Byy57iaz/hbckldSOIoRhYBiMzeNoA0DiRZ9KmfSeXZ1rB8y8X5urSW+iBzf2SaOfzBvDpcoTuAaWx2DPazoOl28fP1hZ+kHUYvxbcMjttjauCFx+JII0dmuZNIwjfeG/GBb9frpSX219k1O4Wi6OEbHEr8at/XQ0y7gTikOxBn/s5wQIDAQAB",
-            "maximum_merge_delay": 86400,
-            "url": "ctlog.api.venafi.com"
         },
         {
             "description": "Up In The Air 'Behind the Sofa' log",
