@@ -7,7 +7,7 @@
             "url": "ct.googleapis.com/logs/argon2017"
         },
         {
-            "description": "Cloudflare Nimbus 2018",
+            "description": "Cloudflare 'Nimbus2018' Log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEAsVpWvrH3Ke0VRaMg9ZQoQjb5g/xh1z3DDa6IuxY5DyPsk6brlvrUNXZzoIg0DcvFiAn2kd6xmu4Obk5XA/nRg==",
             "maximum_merge_delay": 86400,
             "url": "ct.cloudflare.com/logs/nimbus2018"
@@ -25,10 +25,22 @@
             "url": "ct.ws.symantec.com"
         },
         {
+            "description": "DigiCert Yeti 2019",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEkZd/ow8X+FSVWAVSf8xzkFohcPph/x6pS1JHh7g1wnCZ5y/8Hk6jzJxs6t3YMAWz2CPd4VkCdxwKexGhcFxD9A==",
+            "maximum_merge_delay": 86400,
+            "url": "yeti2019.ct.digicert.com/log"
+        },
+        {
             "description": "Google 'Rocketeer' log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIFsYyDzBi7MxCAC/oJBXK7dHjG+1aLCOkHjpoHPqTyghLpzA9BYbqvnV16mAw04vUjyYASVGJCUoI3ctBcJAeg==",
             "maximum_merge_delay": 86400,
             "url": "ct.googleapis.com/rocketeer"
+        },
+        {
+            "description": "DigiCert Yeti 2020",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEURAG+Zo0ac3n37ifZKUhBFEV6jfcCzGIRz3tsq8Ca9BP/5XUHy6ZiqsPaAEbVM0uI3Tm9U24RVBHR9JxDElPmg==",
+            "maximum_merge_delay": 86400,
+            "url": "yeti2020.ct.digicert.com/log"
         },
         {
             "description": "Google 'Argon2021' log",
@@ -55,7 +67,7 @@
             "url": "sirius.ws.symantec.com"
         },
         {
-            "description": "Cloudflare Nimbus 2017",
+            "description": "Cloudflare 'Nimbus2017' Log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE15ypB40iQe6ToFJB2vSA8CW86/rzPNJ+kdg/LNpRvcjuKnLj/xhW5DoiDyI8xtUws5toLqtWwkFf1mRXFLFarw==",
             "maximum_merge_delay": 86400,
             "url": "ct.cloudflare.com/logs/nimbus2017"
@@ -67,25 +79,19 @@
             "url": "ct.googleapis.com/daedalus"
         },
         {
+            "description": "DigiCert Yeti 2022",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEn/jYHd77W1G1+131td5mEbCdX/1v/KiYW5hPLcOROvv+xA8Nw2BDjB7y+RGyutD2vKXStp/5XIeiffzUfdYTJg==",
+            "maximum_merge_delay": 86400,
+            "url": "yeti2022.ct.digicert.com/log"
+        },
+        {
             "description": "Google 'Icarus' log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAETtK8v7MICve56qTHHDhhBOuV4IlUaESxZryCfk9QbG9co/CqPvTsgPDbCpp6oFtyAHwlDhnvr7JijXRD9Cb2FA==",
             "maximum_merge_delay": 86400,
             "url": "ct.googleapis.com/icarus"
         },
         {
-            "description": "StartCom log",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAESPNZ8/YFGNPbsu1Gfs/IEbVXsajWTOaft0oaFIZDqUiwy1o/PErK38SCFFWa+PeOQFXc9NKv6nV0+05/YIYuUQ==",
-            "maximum_merge_delay": 86400,
-            "url": "ct.startssl.com"
-        },
-        {
-            "description": "WoSign log",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzBGIey1my66PTTBmJxklIpMhRrQvAdPG+SvVyLpzmwai8IoCnNBrRhgwhbrpJIsO0VtwKAx+8TpFf1rzgkJgMQ==",
-            "maximum_merge_delay": 86400,
-            "url": "ctlog.wosign.com"
-        },
-        {
-            "description": "Cloudflare Nimbus 2021",
+            "description": "Cloudflare 'Nimbus2021' Log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAExpon7ipsqehIeU1bmpog9TFo4Pk8+9oN8OYHl1Q2JGVXnkVFnuuvPgSo2Ep+6vLffNLcmEbxOucz03sFiematg==",
             "maximum_merge_delay": 86400,
             "url": "ct.cloudflare.com/logs/nimbus2021"
@@ -103,7 +109,13 @@
             "url": "ct1.digicert-ct.com/log"
         },
         {
-            "description": "Cloudflare Nimbus 2020",
+            "description": "DigiCert Yeti 2021",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE6J4EbcpIAl1+AkSRsbhoY5oRTj3VoFfaf1DlQkfi7Rbe/HcjfVtrwN8jaC+tQDGjF+dqvKhWJAQ6Q6ev6q9Mew==",
+            "maximum_merge_delay": 86400,
+            "url": "yeti2021.ct.digicert.com/log"
+        },
+        {
+            "description": "Cloudflare 'Nimbus2020' Log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE01EAhx4o0zPQrXTcYjgCt4MVFsT0Pwjzb1RwrM0lhWDlxAYPP6/gyMCXNkOn/7KFsjL7rwk78tHMpY8rXn8AYg==",
             "maximum_merge_delay": 86400,
             "url": "ct.cloudflare.com/logs/nimbus2020"
@@ -127,7 +139,7 @@
             "url": "log.gdca.com.cn"
         },
         {
-            "description": "Cloudflare Nimbus 2019",
+            "description": "Cloudflare 'Nimbus2019' Log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEkZHz1v5r8a9LmXSMegYZAg4UW+Ug56GtNfJTDNFZuubEJYgWf4FcC5D+ZkYwttXTDSo4OkanG9b3AI4swIQ28g==",
             "maximum_merge_delay": 86400,
             "url": "ct.cloudflare.com/logs/nimbus2019"
@@ -221,6 +233,12 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE6pWeAv/u8TNtS4e8zf0ZF2L/lNPQWQc/Ai0ckP7IRzA78d0NuBEMXR2G3avTK0Zm+25ltzv9WWis36b4ztIYTQ==",
             "maximum_merge_delay": 86400,
             "url": "vega.ws.symantec.com"
+        },
+        {
+            "description": "DigiCert Yeti 2018",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAESYlKFDLLFmA9JScaiaNnqlU8oWDytxIYMfswHy9Esg0aiX+WnP/yj4O0ViEHtLwbmOQeSWBGkIu9YK9CLeer+g==",
+            "maximum_merge_delay": 86400,
+            "url": "yeti2018.ct.digicert.com/log"
         },
         {
             "description": "GDCA CT log #1",
