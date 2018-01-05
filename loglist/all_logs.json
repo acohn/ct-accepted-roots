@@ -67,12 +67,6 @@
             "url": "sirius.ws.symantec.com"
         },
         {
-            "description": "Cloudflare 'Nimbus2017' Log",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE15ypB40iQe6ToFJB2vSA8CW86/rzPNJ+kdg/LNpRvcjuKnLj/xhW5DoiDyI8xtUws5toLqtWwkFf1mRXFLFarw==",
-            "maximum_merge_delay": 86400,
-            "url": "ct.cloudflare.com/logs/nimbus2017"
-        },
-        {
             "description": "Google 'Daedalus' log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEbgwcuu4rakGFYB17fqsILPwMCqUIsz7VcCTRbR0ttrfzizbcI02VYxK75IaNzOnR7qFAot8LowYKMMqNrKQpVg==",
             "maximum_merge_delay": 604800,
