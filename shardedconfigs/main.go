@@ -26,14 +26,14 @@ func main() {
 	case "argon":
 		regex = regexp.MustCompile(`^ct\.googleapis\.com/logs/argon([0-9]{4})$`)
 	default:
-	log.Fatal("Unknown sharded log. Choose one of argon, nimbus, or yeti")
+		log.Fatal("Unknown sharded log. Choose one of argon, nimbus, or yeti")
 	}
 	config := new(configpb.TemporalLogConfig)
 
 	for _, ctlog := range loglist.Logs {
 		if match := regex.FindStringSubmatch(ctlog.Url); match != nil {
 			shard := new(configpb.LogShardConfig)
-			shard.Uri = ctlog.Url
+			shard.Uri = "https://" + ctlog.Url
 			var err error
 			shard.PublicKeyDer, err = ctlog.KeyDER()
 			if err != nil {
