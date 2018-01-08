@@ -85,6 +85,18 @@
             "url": "ct.googleapis.com/icarus"
         },
         {
+            "description": "StartCom log",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAESPNZ8/YFGNPbsu1Gfs/IEbVXsajWTOaft0oaFIZDqUiwy1o/PErK38SCFFWa+PeOQFXc9NKv6nV0+05/YIYuUQ==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.startssl.com"
+        },
+        {
+            "description": "WoSign log",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzBGIey1my66PTTBmJxklIpMhRrQvAdPG+SvVyLpzmwai8IoCnNBrRhgwhbrpJIsO0VtwKAx+8TpFf1rzgkJgMQ==",
+            "maximum_merge_delay": 86400,
+            "url": "ctlog.wosign.com"
+        },
+        {
             "description": "Cloudflare 'Nimbus2021' Log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAExpon7ipsqehIeU1bmpog9TFo4Pk8+9oN8OYHl1Q2JGVXnkVFnuuvPgSo2Ep+6vLffNLcmEbxOucz03sFiematg==",
             "maximum_merge_delay": 86400,

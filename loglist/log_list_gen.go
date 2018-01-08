@@ -10,6 +10,7 @@ import (
 	"github.com/acohn/ct-accepted-roots/httpclient"
 	"github.com/acohn/ct-accepted-roots/loglist"
 	"github.com/acohn/ct-accepted-roots/sthutil"
+	"github.com/google/certificate-transparency-go/logid"
 	"go/format"
 	"golang.org/x/net/context/ctxhttp"
 	"io/ioutil"
@@ -35,7 +36,7 @@ func main() {
 	defer cancel()
 
 	//Grab each log list
-	knownLogs := make(map[loglist.LogID]loglist.Log)
+	knownLogs := make(map[logid.LogID]loglist.Log)
 	logListUrls := strings.Split(*logListUrls, ",")
 
 	for _, listUrl := range logListUrls {
@@ -43,20 +44,20 @@ func main() {
 		if err != nil {
 			log.Fatal(err)
 		}
-		for _, log := range logList.Logs {
-			log.Url = strings.TrimPrefix(log.Url, "https://") //Edgecombe's and crt.sh's lists have https://; Google's doesn't.
-			log.Url = strings.TrimRight(log.Url, "/")         //strip trailing slash
+		for _, ctlog := range logList {
+			ctlog.Url = strings.TrimPrefix(ctlog.Url, "https://") //Edgecombe's and crt.sh's lists have https://; Google's doesn't.
+			ctlog.Url = strings.TrimRight(ctlog.Url, "/")         //strip trailing slash
 
-			knownLogs[log.LogID()] = log
+			knownLogs[ctlog.LogID()] = ctlog
 		}
 	}
 
 	//attempt to connect to each one
-	workingLogChan := make(chan loglist.LogID, len(knownLogs))
+	workingLogChan := make(chan logid.LogID, len(knownLogs))
 	wg := new(sync.WaitGroup)
-	for _, log := range knownLogs {
+	for _, ctlog := range knownLogs {
 		wg.Add(1)
-		go testLog(ctx, log, workingLogChan, wg, httpCl)
+		go testLog(ctx, ctlog, workingLogChan, wg, httpCl)
 	}
 
 	go func() {
@@ -64,17 +65,18 @@ func main() {
 		close(workingLogChan)
 	}()
 
-	working := new(loglist.LogList)
+	var working loglist.LogList
 
 	for logID := range workingLogChan {
-		working.Logs = append(working.Logs, knownLogs[logID])
+		working = append(working, knownLogs[logID])
 	}
 
 	//Sort the working logs by LogID, so we don't rearrange logs based on response time and make diffs evil.
 	working.Sort()
 
 	//for the ones that succeed, write to the all_logs.json file
-	newJson, err := json.MarshalIndent(working, "", "    ")
+	workingJSON := logListJSON{Logs: working}
+	newJson, err := json.MarshalIndent(workingJSON, "", "    ")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -83,7 +85,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	outputGoFile(working.Logs, logListUrls, "log_list.go")
+	outputGoFile(working, logListUrls, "log_list.go")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -114,7 +116,7 @@ import "time"
 
 var Timestamp = time.Date({{ .Timestamp.Year}},time.{{ .Timestamp.Month}},{{ .Timestamp.Day}},{{ .Timestamp.Hour}},{{ .Timestamp.Minute}},{{ .Timestamp.Second}},0,time.UTC)
 
-var Logs = []Log{
+var Logs = LogList{
 {{ range .Logs }}{
 Key: "{{ .Key }}",
 Description: {{ printf "%#v" .Description }}, // {{.LogIDString}}
@@ -144,7 +146,12 @@ MaximumMergeDelay: {{ .MaximumMergeDelay }},
 	return err
 }
 
-func fetchAndParseLogList(ctx context.Context, url string, hc *http.Client) (*loglist.LogList, error) {
+// logListJSON holds a slice of logs for unmarshalling
+type logListJSON struct {
+	Logs loglist.LogList `json:"logs"`
+}
+
+func fetchAndParseLogList(ctx context.Context, url string, hc *http.Client) (loglist.LogList, error) {
 
 	resp, err := ctxhttp.Get(ctx, hc, url)
 	if err != nil {
@@ -156,16 +163,16 @@ func fetchAndParseLogList(ctx context.Context, url string, hc *http.Client) (*lo
 		log.Fatal(err)
 	}
 
-	logList := new(loglist.LogList)
+	logList := new(logListJSON)
 	err = json.Unmarshal(listJSON, logList)
 	if err != nil {
 		log.Fatal(err)
 	}
-	return logList, nil
+	return logList.Logs, nil
 
 }
 
-func testLog(ctx context.Context, ctLog loglist.Log, workingLogChan chan loglist.LogID, wg *sync.WaitGroup, hc *http.Client) {
+func testLog(ctx context.Context, ctLog loglist.Log, workingLogChan chan logid.LogID, wg *sync.WaitGroup, hc *http.Client) {
 	defer wg.Done()
 
 	client, err := ctLog.Client(hc)

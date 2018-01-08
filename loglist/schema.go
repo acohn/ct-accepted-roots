@@ -25,23 +25,14 @@ type Log struct {
 	Url               string  `json:"url"`
 }
 
-//Alias the logID type so we don't have to import the CT logID everywhere
-type LogID logid.LogID
-
 // LogID returns the log ID (the SHA256 hash of the log's key)
-func (l Log) LogID() LogID {
-	return LogID(logid.FromPubKeyB64OrDie(l.Key))
-}
-
-// logIDSlice returns the log ID as a byte slice
-func (l Log) logIDSlice() []byte {
-	logIDArr := l.LogID()
-	return []byte(logIDArr[:])
+func (l Log) LogID() logid.LogID {
+	return logid.FromPubKeyB64OrDie(l.Key)
 }
 
 // LogIDString returns the printable log ID - the Base64 encoded SHA256 hash of the log key.
 func (l Log) LogIDString() string {
-	return base64.StdEncoding.EncodeToString(l.logIDSlice())
+	return base64.StdEncoding.EncodeToString(l.LogID().Bytes())
 }
 
 // KeyDER returns the log's key as a byte slice
@@ -66,12 +57,10 @@ func (l Log) Client(hc *http.Client) (*client.LogClient, error) {
 	return logcli, nil
 }
 
-// LogList holds a slice of logs
-type LogList struct {
-	Logs []Log `json:"logs"`
-}
+// LogList is a slice of logs with a defined sort order
+type LogList []Log
 
-// Sorts a LogList's slice of logs alphabetically by the log ID string, to ensure stable ordering and sane diffs.
+// Sorts a LogList's slice of logs lexicographically by the log ID, to ensure stable ordering and sane diffs.
 func (l LogList) Sort() {
-	sort.Slice(l.Logs, func(i, j int) bool { return strings.Compare(l.Logs[i].LogIDString(), l.Logs[j].LogIDString()) < 0 })
+	sort.Slice(l, func(i, j int) bool { return strings.Compare(l[i].LogIDString(), l[j].LogIDString()) < 0 })
 }
