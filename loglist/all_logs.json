@@ -7,6 +7,12 @@
             "url": "ct.googleapis.com/logs/argon2017"
         },
         {
+            "description": "DigiCert Nessie 2019",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEX+0nudCKImd7QCtelhMrDW0OXni5RE10tiiClZesmrwUk2iHLCoTHHVV+yg5D4n/rxCRVyRhikPpVDOLMLxJaA==",
+            "maximum_merge_delay": 86400,
+            "url": "nessie2019.ct.digicert.com/log"
+        },
+        {
             "description": "Cloudflare 'Nimbus2018' Log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEAsVpWvrH3Ke0VRaMg9ZQoQjb5g/xh1z3DDa6IuxY5DyPsk6brlvrUNXZzoIg0DcvFiAn2kd6xmu4Obk5XA/nRg==",
             "maximum_merge_delay": 86400,
@@ -35,6 +41,12 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIFsYyDzBi7MxCAC/oJBXK7dHjG+1aLCOkHjpoHPqTyghLpzA9BYbqvnV16mAw04vUjyYASVGJCUoI3ctBcJAeg==",
             "maximum_merge_delay": 86400,
             "url": "ct.googleapis.com/rocketeer"
+        },
+        {
+            "description": "DigiCert Nessie 2021",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE9o7AiwrbGBIX6Lnc47I6OfLMdZnRzKoP5u072nBi6vpIOEooktTi1gNwlRPzGC2ySGfuc1xLDeaA/wSFGgpYFg==",
+            "maximum_merge_delay": 86400,
+            "url": "nessie2021.ct.digicert.com/log"
         },
         {
             "description": "DigiCert Yeti 2020",
@@ -103,6 +115,12 @@
             "url": "ct.cloudflare.com/logs/nimbus2021"
         },
         {
+            "description": "DigiCert Nessie 2022",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEJyTdaAMoy/5jvg4RR019F2ihEV1McclBKMe2okuX7MCv/C87v+nxsfz1Af+p+0lADGMkmNd5LqZVqxbGvlHYcQ==",
+            "maximum_merge_delay": 86400,
+            "url": "nessie2022.ct.digicert.com/log"
+        },
+        {
             "description": "Comodo 'Sabre' CT log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE8m/SiQ8/xfiHHqtls9m7FyOMBg4JVZY9CgiixXGz0akvKD6DEL8S0ERmFe9U4ZiA0M4kbT5nmuk3I85Sk4bagA==",
             "maximum_merge_delay": 86400,
@@ -131,6 +149,12 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEI3MQm+HzXvaYa2mVlhB4zknbtAT8cSxakmBoJcBKGqGwYS0bhxSpuvABM1kdBTDpQhXnVdcq+LSiukXJRpGHVg==",
             "maximum_merge_delay": 86400,
             "url": "ct.googleapis.com/logs/argon2019"
+        },
+        {
+            "description": "DigiCert Nessie 2018",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEVqpLa2W+Rz1XDZPBIyKJO+KKFOYZTj9MpJWnZeFUqzc5aivOiWEVhs8Gy2AlH3irWPFjIZPZMs3Dv7M+0LbPyQ==",
+            "maximum_merge_delay": 86400,
+            "url": "nessie2018.ct.digicert.com/log"
         },
         {
             "description": "Comodo 'Mammoth' CT log",
@@ -245,6 +269,12 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAESYlKFDLLFmA9JScaiaNnqlU8oWDytxIYMfswHy9Esg0aiX+WnP/yj4O0ViEHtLwbmOQeSWBGkIu9YK9CLeer+g==",
             "maximum_merge_delay": 86400,
             "url": "yeti2018.ct.digicert.com/log"
+        },
+        {
+            "description": "DigiCert Nessie 2020",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE4hHIyMVIrR9oShgbQMYEk8WX1lmkfFKB448Gn93KbsZnnwljDHY6MQqEnWfKGgMOq0gh3QK48c5ZB3UKSIFZ4g==",
+            "maximum_merge_delay": 86400,
+            "url": "nessie2020.ct.digicert.com/log"
         },
         {
             "description": "GDCA CT log #1",

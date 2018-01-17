@@ -16,17 +16,19 @@ import (
 func main() {
 	var regex *regexp.Regexp
 	if len(os.Args) < 2 {
-		log.Fatal("Must specify name of sharded log to display, either argon, nimbus, or yeti")
+		log.Fatal("Must specify name of sharded log, either argon, nessie, nimbus, or yeti")
 	}
 	switch logName := os.Args[1]; logName {
 	case "nimbus":
 		regex = regexp.MustCompile(`^ct\.cloudflare\.com/logs/nimbus([0-9]{4})$`)
 	case "yeti":
 		regex = regexp.MustCompile(`^yeti([0-9]{4})\.ct\.digicert\.com/log$`)
+case "nessie":
+                regex = regexp.MustCompile(`^nessie([0-9]{4})\.ct\.digicert\.com/log$`)
 	case "argon":
 		regex = regexp.MustCompile(`^ct\.googleapis\.com/logs/argon([0-9]{4})$`)
 	default:
-		log.Fatal("Unknown sharded log. Choose one of argon, nimbus, or yeti")
+		log.Fatal("Unknown sharded log. Choose one of argon, nessie, nimbus, or yeti")
 	}
 	config := new(configpb.TemporalLogConfig)
 
