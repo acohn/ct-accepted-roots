@@ -11,6 +11,7 @@ import (
 	"github.com/acohn/ct-accepted-roots/loglist"
 	"github.com/acohn/ct-accepted-roots/sthutil"
 	"github.com/google/certificate-transparency-go/logid"
+	"github.com/pkg/errors"
 	"go/format"
 	"golang.org/x/net/context/ctxhttp"
 	"io/ioutil"
@@ -22,7 +23,7 @@ import (
 	"time"
 )
 
-var logListUrls = flag.String("log_list_urls", "https://crt.sh/logs.json,https://ct.grahamedgecombe.com/logs.json,https://www.gstatic.com/ct/log_list/all_logs_list.json", "Comma-separated list of log URLs")
+var logListUrls = flag.String("log_list_urls", "https://raw.githubusercontent.com/acohn/ct-accepted-roots/master/loglist/all_logs.json,https://crt.sh/logs.json,https://ct.grahamedgecombe.com/logs.json,https://www.gstatic.com/ct/log_list/all_logs_list.json", "Comma-separated list of log URLs")
 var timeout = flag.Int("timeout", 15, "Timeout for all HTTP responses")
 
 func main() {
@@ -38,11 +39,13 @@ func main() {
 	//Grab each log list
 	knownLogs := make(map[logid.LogID]loglist.Log)
 	logListUrls := strings.Split(*logListUrls, ",")
+	var workingLogListUrls []string
 
 	for _, listUrl := range logListUrls {
 		logList, err := fetchAndParseLogList(ctx, listUrl, httpCl)
 		if err != nil {
-			log.Fatal(err)
+			log.Print(err)
+			continue
 		}
 		for _, ctlog := range logList {
 			ctlog.Url = strings.TrimPrefix(ctlog.Url, "https://") //Edgecombe's and crt.sh's lists have https://; Google's doesn't.
@@ -50,6 +53,7 @@ func main() {
 
 			knownLogs[ctlog.LogID()] = ctlog
 		}
+		workingLogListUrls = append(workingLogListUrls, listUrl)
 	}
 
 	//attempt to connect to each one
@@ -85,7 +89,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	outputGoFile(working, logListUrls, "log_list.go")
+	outputGoFile(working, workingLogListUrls, "log_list.go")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -132,18 +136,21 @@ MaximumMergeDelay: {{ .MaximumMergeDelay }},
 
 	tmpl, err := template.New("log_list.go").Parse(tmplText)
 	if err != nil {
-		return err
+		return errors.Wrap(err, "failed to create log list template")
 	}
 	err = tmpl.Execute(buf, allLogsGo)
 	if err != nil {
-		return err
+		return errors.Wrap(err, "failed to execute log list template")
 	}
 	formatted, err := format.Source(buf.Bytes())
 	if err != nil {
-		return err
+		return errors.Wrap(err, "failed to go fmt new log_list.go")
 	}
 	err = ioutil.WriteFile(outputFile, formatted, 0644)
-	return err
+	if err != nil {
+		return errors.Wrap(err, "failed to write new log_list.go")
+	}
+	return nil
 }
 
 // logListJSON holds a slice of logs for unmarshalling
@@ -155,18 +162,18 @@ func fetchAndParseLogList(ctx context.Context, url string, hc *http.Client) (log
 
 	resp, err := ctxhttp.Get(ctx, hc, url)
 	if err != nil {
-		log.Fatal(err)
+		return nil, errors.Wrapf(err, "fetching loglist from %q failed", url)
 	}
 	defer resp.Body.Close()
 	listJSON, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		log.Fatal(err)
+		return nil, errors.Wrapf(err, "reading loglist from %q failed", url)
 	}
 
 	logList := new(logListJSON)
 	err = json.Unmarshal(listJSON, logList)
 	if err != nil {
-		log.Fatal(err)
+		return nil, errors.Wrapf(err, "parsing loglist from %q failed", url)
 	}
 	return logList.Logs, nil
 
@@ -174,6 +181,11 @@ func fetchAndParseLogList(ctx context.Context, url string, hc *http.Client) (log
 
 func testLog(ctx context.Context, ctLog loglist.Log, workingLogChan chan logid.LogID, wg *sync.WaitGroup, hc *http.Client) {
 	defer wg.Done()
+
+	if ctLog.Key == "" {
+		log.Printf("Log %v has an empty key", ctLog.Url)
+		return
+	}
 
 	client, err := ctLog.Client(hc)
 	if err != nil {
