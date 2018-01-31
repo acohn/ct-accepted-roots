@@ -10,12 +10,14 @@ package loglist
 
 import (
 	"encoding/base64"
+	"fmt"
 	"github.com/google/certificate-transparency-go/client"
 	"github.com/google/certificate-transparency-go/jsonclient"
 	"github.com/google/certificate-transparency-go/logid"
 	"net/http"
 	"sort"
 	"strings"
+	"sync"
 )
 
 type Log struct {
@@ -55,6 +57,51 @@ func (l Log) Client(hc *http.Client) (*client.LogClient, error) {
 		return nil, err
 	}
 	return logcli, nil
+}
+
+var idToLog map[logid.LogID]*Log
+var idToLogOnce sync.Once
+
+func ByLogID(id logid.LogID) (*Log, error) {
+	idToLogOnce.Do(func() {
+		idToLog = make(map[logid.LogID]*Log)
+		for idx := range Logs {
+			idToLog[Logs[idx].LogID()] = &Logs[idx]
+		}
+	})
+	if ctlog, ok := idToLog[id]; ok {
+		return ctlog, nil
+	} else {
+		return nil, fmt.Errorf("Could not find %s", id.String())
+	}
+}
+
+func ByLogIdStr(idStr string) (*Log, error) {
+	logID, err := logid.FromB64(idStr)
+	if err != nil {
+		return nil, err
+	}
+	return ByLogID(logID)
+}
+
+var urlToLog map[string]*Log
+var urlToLogOnce sync.Once
+
+func ByLogURL(url string) (*Log, error) {
+	urlToLogOnce.Do(func() {
+		urlToLog = make(map[string]*Log)
+		for idx := range Logs {
+			urlToLog[Logs[idx].Url] = &Logs[idx]
+		}
+	})
+
+	url = strings.TrimPrefix(url, "https://") //normalize
+
+	if ctlog, ok := urlToLog[url]; ok {
+		return ctlog, nil
+	} else {
+		return nil, fmt.Errorf("Could not find log with URL %s", url)
+	}
 }
 
 // LogList is a slice of logs with a defined sort order
