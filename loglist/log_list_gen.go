@@ -23,7 +23,7 @@ import (
 	"time"
 )
 
-var logListUrls = flag.String("log_list_urls", "https://raw.githubusercontent.com/acohn/ct-accepted-roots/master/loglist/all_logs.json,https://crt.sh/logs.json,https://ct.grahamedgecombe.com/logs.json,https://www.gstatic.com/ct/log_list/all_logs_list.json", "Comma-separated list of log URLs")
+var logListUrls = flag.String("log_list_urls", "https://crt.sh/logs.json,https://ct.grahamedgecombe.com/logs.json,https://www.gstatic.com/ct/log_list/all_logs_list.json,https://raw.githubusercontent.com/acohn/ct-accepted-roots/master/loglist/all_logs.json", "Comma-separated list of log URLs")
 var timeout = flag.Int("timeout", 15, "Timeout for all HTTP responses")
 
 func main() {
