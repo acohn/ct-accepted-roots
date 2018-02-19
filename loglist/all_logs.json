@@ -275,12 +275,6 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE4hHIyMVIrR9oShgbQMYEk8WX1lmkfFKB448Gn93KbsZnnwljDHY6MQqEnWfKGgMOq0gh3QK48c5ZB3UKSIFZ4g==",
             "maximum_merge_delay": 86400,
             "url": "nessie2020.ct.digicert.com/log"
-        },
-        {
-            "description": "GDCA CT log #1",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAErQ8wrZ55pDiJJlSGq0FykG/7yhemrO7Gn30CBexBqMdBnTJJrbA5vTqHPnzuaGxg0Ucqk67hQPQLyDU8HQ9l0w==",
-            "maximum_merge_delay": 86400,
-            "url": "ct.gdca.com.cn"
         }
     ]
 }
