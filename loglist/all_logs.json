@@ -67,6 +67,18 @@
             "url": "ctlog-gen2.api.venafi.com"
         },
         {
+            "description": "Google 'Xenon2020' log",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEZU75VqjyzSTgFZKAnWg1QeYfFFIRZTMK7q3kWWZsmHhQdrBYnHRZ3OA4kUeUx0JN+xX+dSgt1ruqUhhl7jOvmw==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.googleapis.com/logs/xenon2020"
+        },
+        {
+            "description": "Google 'Xenon2019' log",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE/XyDwqzXL9i2GTjMYkqaEyiRL0Dy9sHq/BTebFdshbvCaXXEh6mjUK0Yy+AsDcI4MpzF1l7Kded2MD5zi420gA==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.googleapis.com/logs/xenon2019"
+        },
+        {
             "description": "GDCA 2",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEx6zC8wCbMs3fpQWnSCeo2RvG827AEssGkMa+5RVIpRF0SDO4hFsn2Ph1l8marSCuwVLhv0JIN3arSzbUieX6HA==",
             "maximum_merge_delay": 86400,
@@ -113,6 +125,12 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAExpon7ipsqehIeU1bmpog9TFo4Pk8+9oN8OYHl1Q2JGVXnkVFnuuvPgSo2Ep+6vLffNLcmEbxOucz03sFiematg==",
             "maximum_merge_delay": 86400,
             "url": "ct.cloudflare.com/logs/nimbus2021"
+        },
+        {
+            "description": "Google 'Xenon2022' log",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE+WS9FSxAYlCVEzg8xyGwOrmPonoV14nWjjETAIdZvLvukPzIWBMKv6tDNlQjpIHNrUcUt1igRPpqoKDXw2MeKw==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.googleapis.com/logs/xenon2022"
         },
         {
             "description": "DigiCert Nessie 2022",
@@ -173,6 +191,12 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEkZHz1v5r8a9LmXSMegYZAg4UW+Ug56GtNfJTDNFZuubEJYgWf4FcC5D+ZkYwttXTDSo4OkanG9b3AI4swIQ28g==",
             "maximum_merge_delay": 86400,
             "url": "ct.cloudflare.com/logs/nimbus2019"
+        },
+        {
+            "description": "Google 'Xenon2021' log",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAER+1MInu8Q39BwDZ5Rp9TwXhwm3ktvgJzpk/r7dDgGk7ZacMm3ljfcoIvP1E72T8jvyLT1bvdapylajZcTH6W5g==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.googleapis.com/logs/xenon2021"
         },
         {
             "description": "DigiCert Log Server 2",
@@ -245,6 +269,12 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEw8i8S7qiGEs9NXv0ZJFh6uuOmR2Q7dPprzk9XNNGkUXjzqx2SDvRfiwKYwBljfWujozHESVPQyydGaHhkaSz/g==",
             "maximum_merge_delay": 86400,
             "url": "ct.googleapis.com/testtube"
+        },
+        {
+            "description": "Google 'Xenon2018' log",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE1syJvwQdrv0a8dM2VAnK/SmHJNw/+FxC+CncFcnXMX2jNH9Xs7Q56FiV3taG5G2CokMsizhpcm7xXzuR3IHmag==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.googleapis.com/logs/xenon2018"
         },
         {
             "description": "Google 'Argon2020' log",
