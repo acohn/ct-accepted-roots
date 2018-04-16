@@ -23,6 +23,7 @@ var supportedShards = map[ShardedLogName]*regexp.Regexp{
 	"yeti":   regexp.MustCompile(`^yeti([0-9]{4})\.ct\.digicert\.com/log$`),
 	"nessie": regexp.MustCompile(`^nessie([0-9]{4})\.ct\.digicert\.com/log$`),
 	"argon":  regexp.MustCompile(`^ct\.googleapis\.com/logs/argon([0-9]{4})$`),
+        "xenon":  regexp.MustCompile(`^ct\.googleapis\.com/logs/xenon([0-9]{4})$`),
 }
 
 type ShardedLogName string
