@@ -25,7 +25,6 @@ import (
 const (
 	projectID   = "universal-talon-184518"
 	datasetName = "ct_tables"
-	tableName   = "results_20180331"
 )
 
 type censysBQRow struct {
@@ -41,6 +40,8 @@ type addRequest struct {
 func main() {
 	var pbFile string
 	var logUrl string
+	var tableName string
+	flag.StringVar(&tableName, "table", "", "table name to pull results from")
 	flag.StringVar(&pbFile, "t", "", "protobuf-format temporal log spec file; if set, overrides -l")
 	flag.StringVar(&logUrl, "l", "ct.googleapis.com/skydiver", "CT log to use")
 	flag.Parse()
