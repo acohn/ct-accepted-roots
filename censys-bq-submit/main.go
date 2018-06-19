@@ -4,8 +4,8 @@ import (
 	"crypto/sha256"
 	"crypto/tls"
 	"encoding/base64"
+	"encoding/pem"
 	"flag"
-	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -222,10 +222,21 @@ func genIntermediatesPool(filename string) (*x509.CertPool, error) {
 
 	certpool := x509.NewCertPool()
 
-	ok := certpool.AppendCertsFromPEM(intermediatesPEM)
-
-	if !ok {
-		return nil, fmt.Errorf("adding intermediates to intermediate pool failed?")
+	for len(intermediatesPEM) > 0 {
+		var block *pem.Block
+		block, intermediatesPEM = pem.Decode(intermediatesPEM)
+		if block == nil {
+			break
+		}
+		if block.Type != "CERTIFICATE" {
+			continue
+		}
+		cert, err := x509.ParseCertificate(block.Bytes)
+		if err != nil {
+			continue
+		}
+		cert.UnhandledCriticalExtensions = nil //Don't worry about unhandled critical extensions - we aren't verifying for purposes of trust
+		certpool.AddCert(cert)
 	}
 	return certpool, nil
 }
