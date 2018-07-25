@@ -73,6 +73,12 @@
             "url": "ct.googleapis.com/logs/xenon2020"
         },
         {
+            "description": "Google 'Solera2019' log",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEJUwGinXUWVNaBiK2Vl/rdyMkxKaWJHR8dj9yD5AlZEtEbfvAMQQ8o7DQyXVm7TX+eAA9wL2Vtt6DpoMEL0q/rw==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.googleapis.com/logs/solera2019"
+        },
+        {
             "description": "Google 'Xenon2019' log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE/XyDwqzXL9i2GTjMYkqaEyiRL0Dy9sHq/BTebFdshbvCaXXEh6mjUK0Yy+AsDcI4MpzF1l7Kded2MD5zi420gA==",
             "maximum_merge_delay": 86400,
@@ -89,6 +95,12 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEowJkhCK7JewN47zCyYl93UXQ7uYVhY/Z5xcbE4Dq7bKFN61qxdglnfr0tPNuFiglN+qjN2Syxwv9UeXBBfQOtQ==",
             "maximum_merge_delay": 86400,
             "url": "sirius.ws.symantec.com"
+        },
+        {
+            "description": "Google 'Solera2020' log",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEiKfWtuoWCPMEzSKySjMjXpo38WOdZr6Yq0WYa2JQOv1uVMxkqHywf9Gz1kGeRLq/Rz3tVVvXgqb4jQ1UqKVKnw==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.googleapis.com/logs/solera2020"
         },
         {
             "description": "Google 'Daedalus' log",
@@ -109,6 +121,24 @@
             "url": "ct.googleapis.com/icarus"
         },
         {
+            "description": "Google 'Argon2022' log",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEeIPc6fGmuBg6AJkv/z7NFckmHvf/OqmjchZJ6wm2qN200keRDg352dWpi7CHnSV51BpQYAj1CQY5JuRAwrrDwg==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.googleapis.com/logs/argon2022"
+        },
+        {
+            "description": "Cloudflare Cirrus",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE8U+38Y71ejmKupjvqEtlawxXTfXF7igMV8I8vKjj06C+OcfQwP/cv4XCJZxm+gm+zzHWhdEJRVDDwcE8Z2HSmg==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.cloudflare.com/logs/cirrus"
+        },
+        {
+            "description": "Cloudflare Nimbus 2022",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAESLJHTlAycmJKDQxIv60pZG8g33lSYxYpCi5gteI6HLevWbFVCdtZx+m9b+0LrwWWl/87mkNN6xE0M4rnrIPA/w==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.cloudflare.com/logs/nimbus2022"
+        },
+        {
             "description": "Cloudflare 'Nimbus2021' Log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAExpon7ipsqehIeU1bmpog9TFo4Pk8+9oN8OYHl1Q2JGVXnkVFnuuvPgSo2Ep+6vLffNLcmEbxOucz03sFiematg==",
             "maximum_merge_delay": 86400,
@@ -125,6 +155,12 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEJyTdaAMoy/5jvg4RR019F2ihEV1McclBKMe2okuX7MCv/C87v+nxsfz1Af+p+0lADGMkmNd5LqZVqxbGvlHYcQ==",
             "maximum_merge_delay": 86400,
             "url": "nessie2022.ct.digicert.com/log"
+        },
+        {
+            "description": "Google 'Solera2018' log",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEEuFqn5cy1nACARlWIUjeJaRDKl0mcf9gvFZXpPhHsyykizXvULF5GZNGfucWIyUccBRfmYJZTTrXqw0mVts7hA==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.googleapis.com/logs/solera2018"
         },
         {
             "description": "Comodo 'Sabre' CT log",
@@ -155,6 +191,12 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEI3MQm+HzXvaYa2mVlhB4zknbtAT8cSxakmBoJcBKGqGwYS0bhxSpuvABM1kdBTDpQhXnVdcq+LSiukXJRpGHVg==",
             "maximum_merge_delay": 86400,
             "url": "ct.googleapis.com/logs/argon2019"
+        },
+        {
+            "description": "Google 'Solera2022' log",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEFWj6UQDxzHWmgzQtQQ7REDC0nxnU9mpOmA0lv5trA0t7IRzSkh4DOznPe+nkxmaC8iS1capCtKjyYhUNRrvWqA==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.googleapis.com/logs/solera2022"
         },
         {
             "description": "DigiCert Nessie 2018",
@@ -197,6 +239,12 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEW0rHAbd0VLpAnEN1lD+s77NxVrjT4nuuobE+U6qXM6GCu19dHAv6hQ289+Wg4CLwoInZCn9fJpTTJOOZLuQVjQ==",
             "maximum_merge_delay": 86400,
             "url": "ctlog.gdca.com.cn"
+        },
+        {
+            "description": "Google 'Solera2021' log",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE1glwxqXsw2VqlAbHSeWbTthMGNIuACVn8Jj/jrnY2iN2uVUrEEwLj5VUCb+WF2XY44+mfUVYY7R/d8TIZ4olnw==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.googleapis.com/logs/solera2021"
         },
         {
             "description": "WoTrus",
@@ -275,6 +323,12 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE6pWeAv/u8TNtS4e8zf0ZF2L/lNPQWQc/Ai0ckP7IRzA78d0NuBEMXR2G3avTK0Zm+25ltzv9WWis36b4ztIYTQ==",
             "maximum_merge_delay": 86400,
             "url": "vega.ws.symantec.com"
+        },
+        {
+            "description": "Google 'Crucible' log",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEKATl2B3SAbxyzGOfNRB+AytNTGvdF/FFY6HzWb+/HPE4lJ37vx2nEm99KYUy9SoNzF5VyTwCQG5nL/c5Q77yQQ==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.googleapis.com/logs/crucible"
         },
         {
             "description": "DigiCert Yeti 2018",
