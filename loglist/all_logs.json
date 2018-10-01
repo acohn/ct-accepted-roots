@@ -25,12 +25,6 @@
             "url": "dodo.ct.comodo.com"
         },
         {
-            "description": "Symantec log",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEluqsHEYMG1XcDfy1lCdGV0JwOmkY4r87xNuroPS2bMBTP01CEDPwWJePa75y9CrsHEKqAy8afig1dpkIPSEUhg==",
-            "maximum_merge_delay": 86400,
-            "url": "ct.ws.symantec.com"
-        },
-        {
             "description": "DigiCert Yeti 2019",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEkZd/ow8X+FSVWAVSf8xzkFohcPph/x6pS1JHh7g1wnCZ5y/8Hk6jzJxs6t3YMAWz2CPd4VkCdxwKexGhcFxD9A==",
             "maximum_merge_delay": 86400,
@@ -89,12 +83,6 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEx6zC8wCbMs3fpQWnSCeo2RvG827AEssGkMa+5RVIpRF0SDO4hFsn2Ph1l8marSCuwVLhv0JIN3arSzbUieX6HA==",
             "maximum_merge_delay": 86400,
             "url": "log2.gdca.com.cn"
-        },
-        {
-            "description": "Symantec 'Sirius' log",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEowJkhCK7JewN47zCyYl93UXQ7uYVhY/Z5xcbE4Dq7bKFN61qxdglnfr0tPNuFiglN+qjN2Syxwv9UeXBBfQOtQ==",
-            "maximum_merge_delay": 86400,
-            "url": "sirius.ws.symantec.com"
         },
         {
             "description": "Google 'Solera2020' log",
@@ -253,12 +241,6 @@
             "url": "ctlog.wotrus.com"
         },
         {
-            "description": "Symantec Deneb",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEloIeo806gIQel7i3BxmudhoO+FV2nRIzTpGI5NBIUFzBn2py1gH1FNbQOG7hMrxnDTfouiIQ0XKGeSiW+RcemA==",
-            "maximum_merge_delay": 86400,
-            "url": "deneb.ws.symantec.com"
-        },
-        {
             "description": "Google 'Argon2018' log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE0gBVBa3VR7QZu82V+ynXWD14JM3ORp37MtRxTmACJV5ZPtfUA7htQ2hofuigZQs+bnFZkje+qejxoyvk2Q1VaA==",
             "maximum_merge_delay": 86400,
@@ -317,12 +299,6 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEEmyGDvYXsRJsNyXSrYc9DjHsIa2xzb4UR7ZxVoV6mrc9iZB7xjI6+NrOiwH+P/xxkRmOFG6Jel20q37hTh58rA==",
             "maximum_merge_delay": 86400,
             "url": "ct.googleapis.com/skydiver"
-        },
-        {
-            "description": "Symantec 'Vega' log",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE6pWeAv/u8TNtS4e8zf0ZF2L/lNPQWQc/Ai0ckP7IRzA78d0NuBEMXR2G3avTK0Zm+25ltzv9WWis36b4ztIYTQ==",
-            "maximum_merge_delay": 86400,
-            "url": "vega.ws.symantec.com"
         },
         {
             "description": "Google 'Crucible' log",
