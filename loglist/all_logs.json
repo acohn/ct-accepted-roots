@@ -211,6 +211,12 @@
             "url": "ct.cloudflare.com/logs/nimbus2019"
         },
         {
+            "description": "Cloudflare 'Nimbus2023' Log",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEi/8tkhjLRp0SXrlZdTzNkTd6HqmcmXiDJz3fAdWLgOhjmv4mohvRhwXul9bgW0ODgRwC9UGAgH/vpGHPvIS1qA==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.cloudflare.com/logs/nimbus2023"
+        },
+        {
             "description": "Google 'Xenon2021' log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAER+1MInu8Q39BwDZ5Rp9TwXhwm3ktvgJzpk/r7dDgGk7ZacMm3ljfcoIvP1E72T8jvyLT1bvdapylajZcTH6W5g==",
             "maximum_merge_delay": 86400,
@@ -221,12 +227,6 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzF05L2a4TH/BLgOhNKPoioYCrkoRxvcmajeb8Dj4XQmNY+gxa4Zmz3mzJTwe33i0qMVp+rfwgnliQ/bM/oFmhA==",
             "maximum_merge_delay": 86400,
             "url": "ct2.digicert-ct.com/log"
-        },
-        {
-            "description": "GDCA CT log #2",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEW0rHAbd0VLpAnEN1lD+s77NxVrjT4nuuobE+U6qXM6GCu19dHAv6hQ289+Wg4CLwoInZCn9fJpTTJOOZLuQVjQ==",
-            "maximum_merge_delay": 86400,
-            "url": "ctlog.gdca.com.cn"
         },
         {
             "description": "Google 'Solera2021' log",
@@ -269,12 +269,6 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE9UV9+jO2MCTzkabodO2F7LM03MUBc8MrdAtkcW6v6GA9taTTw9QJqofm0BbdAsbtJL/unyEf0zIkRgXjjzaYqQ==",
             "maximum_merge_delay": 86400,
             "url": "plausible.ct.nordu.net"
-        },
-        {
-            "description": "Up In The Air 'Behind the Sofa' log",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEWTmyppTGMrn+Y2keMDujW9WwQ8lQHpWlLadMSkmOi4+3+MziW5dy1eo/sSFI6ERrf+rvIv/f9F87bXcEsa+Qjw==",
-            "maximum_merge_delay": 86400,
-            "url": "ct.filippo.io/behindthesofa"
         },
         {
             "description": "Google 'Testtube' log",
