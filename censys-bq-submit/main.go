@@ -6,6 +6,7 @@ import (
 	"encoding/base64"
 	"encoding/pem"
 	"flag"
+	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -222,21 +223,56 @@ func genIntermediatesPool(filename string) (*x509.CertPool, error) {
 
 	certpool := x509.NewCertPool()
 
-	for len(intermediatesPEM) > 0 {
+	// We want to mark the name constraints extension as fully handled even if Go thinks it can't fully handle it - there are 
+	// certificates out there with, e.g., directory name constraints that we don't care about. Go handles the relevant DNS/IP
+	// name constraints correctly itself.
+	ok := AppendCertsFromPEM(certpool, intermediatesPEM, func(cert *x509.Certificate) (bool, *x509.Certificate) {
+		if len(cert.UnhandledCriticalExtensions) == 0 {
+			return true, cert
+		} else if len(cert.UnhandledCriticalExtensions) == 1 && x509.OIDExtensionNameConstraints.Equal(cert.UnhandledCriticalExtensions[0]) {
+			cert.UnhandledCriticalExtensions = nil
+			return true, cert
+		} else {
+			return false, cert
+		}
+	})
+
+	if !ok {
+		return nil, fmt.Errorf("adding intermediates to intermediate pool failed?")
+	}
+	return certpool, nil
+}
+
+// AppendCertsFromPEM attempts to parse a series of PEM encoded certificates.
+// It appends any certificates found to s and reports whether any certificates
+// were successfully parsed.
+//
+// On many Linux systems, /etc/ssl/cert.pem will contain the system wide set
+// of root CAs in a format suitable for this function.
+func AppendCertsFromPEM(s *x509.CertPool, pemCerts []byte, callback func(*x509.Certificate) (bool, *x509.Certificate)) (ok bool) {
+	for len(pemCerts) > 0 {
 		var block *pem.Block
-		block, intermediatesPEM = pem.Decode(intermediatesPEM)
+		block, pemCerts = pem.Decode(pemCerts)
 		if block == nil {
 			break
 		}
-		if block.Type != "CERTIFICATE" {
+		if block.Type != "CERTIFICATE" || len(block.Headers) != 0 {
 			continue
 		}
+
 		cert, err := x509.ParseCertificate(block.Bytes)
 		if err != nil {
 			continue
 		}
-		cert.UnhandledCriticalExtensions = nil //Don't worry about unhandled critical extensions - we aren't verifying for purposes of trust
-		certpool.AddCert(cert)
+
+		ok, cert := callback(cert)
+		if !ok {
+			continue
+		}
+
+		s.AddCert(cert)
+		ok = true
 	}
-	return certpool, nil
+
+	return
 }
