@@ -259,6 +259,12 @@
             "url": "plausible.ct.nordu.net"
         },
         {
+            "description": "DigiCert Nessie 2023",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEEXu8iQwSCRSf2CbITGpUpBtFVt8+I0IU0d1C36Lfe1+fbwdaI0Z5FktfM2fBoI1bXBd18k2ggKGYGgdZBgLKTg==",
+            "maximum_merge_delay": 86400,
+            "url": "nessie2023.ct.digicert.com/log"
+        },
+        {
             "description": "Google 'Testtube' log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEw8i8S7qiGEs9NXv0ZJFh6uuOmR2Q7dPprzk9XNNGkUXjzqx2SDvRfiwKYwBljfWujozHESVPQyydGaHhkaSz/g==",
             "maximum_merge_delay": 86400,
