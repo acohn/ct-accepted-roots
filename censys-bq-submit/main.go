@@ -15,7 +15,7 @@ import (
 
 	"cloud.google.com/go/bigquery"
 	"github.com/acohn/ct-accepted-roots/loglist"
-	"github.com/google/certificate-transparency-go"
+	ct "github.com/google/certificate-transparency-go"
 	ct_client "github.com/google/certificate-transparency-go/client"
 	"github.com/google/certificate-transparency-go/x509"
 	"github.com/juju/ratelimit"
@@ -24,13 +24,12 @@ import (
 )
 
 const (
-	projectID   = "universal-talon-184518"
-	datasetName = "ct_tables"
+	projectID   = "ct-submissions-alexcohn"
+	datasetName = "certificates"
 )
 
 type censysBQRow struct {
-	Raw  string   `bigquery:"raw,nullable"`
-	Tags []string `bigquery:"tags"`
+	Raw string `bigquery:"raw,nullable"`
 }
 
 type addRequest struct {
@@ -223,7 +222,7 @@ func genIntermediatesPool(filename string) (*x509.CertPool, error) {
 
 	certpool := x509.NewCertPool()
 
-	// We want to mark the name constraints extension as fully handled even if Go thinks it can't fully handle it - there are 
+	// We want to mark the name constraints extension as fully handled even if Go thinks it can't fully handle it - there are
 	// certificates out there with, e.g., directory name constraints that we don't care about. Go handles the relevant DNS/IP
 	// name constraints correctly itself.
 	ok := AppendCertsFromPEM(certpool, intermediatesPEM, func(cert *x509.Certificate) (bool, *x509.Certificate) {
@@ -250,28 +249,33 @@ func genIntermediatesPool(filename string) (*x509.CertPool, error) {
 // On many Linux systems, /etc/ssl/cert.pem will contain the system wide set
 // of root CAs in a format suitable for this function.
 func AppendCertsFromPEM(s *x509.CertPool, pemCerts []byte, callback func(*x509.Certificate) (bool, *x509.Certificate)) (ok bool) {
+	ok = true
 	for len(pemCerts) > 0 {
 		var block *pem.Block
 		block, pemCerts = pem.Decode(pemCerts)
 		if block == nil {
-			break
+			ok = false
+			return
 		}
 		if block.Type != "CERTIFICATE" || len(block.Headers) != 0 {
+			log.Printf("Non-CERTIFICATE block found in intermediates?")
 			continue
 		}
 
 		cert, err := x509.ParseCertificate(block.Bytes)
 		if err != nil {
-			continue
+			if _, ok := err.(x509.NonFatalErrors); !ok {
+				log.Printf("Error while parsing intermediate certificate: %v", err)
+				continue
+			}
 		}
 
-		ok, cert := callback(cert)
-		if !ok {
+		dontSkip, cert := callback(cert)
+		if !dontSkip {
 			continue
 		}
 
 		s.AddCert(cert)
-		ok = true
 	}
 
 	return
