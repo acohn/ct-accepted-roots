@@ -1,5 +1,6 @@
 {
     "logs": [
+	    {"description":"TrustAsia CT Log","key":"MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEeUeY0SDoUdASOMgFwOFUSkaZ8NoKnknjtbakmBDUJJhPVn9L/adnExZBXl46ZBT701qUixfqd/s3BpuMyWWUdw==","maximum_merge_delay":86400,"url":"ct.trustasia.com/log1"},
         {
             "description": "Google 'Argon2017' log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEVG18id3qnfC6X/RtYHo3TwIlvxz2b4WurxXfaW7t26maKZfymXYe5jNGHif0vnDdWde6z/7Qco6wVw+dN4liow==",
