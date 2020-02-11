@@ -1,6 +1,11 @@
 {
     "logs": [
-	    {"description":"TrustAsia CT Log","key":"MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEeUeY0SDoUdASOMgFwOFUSkaZ8NoKnknjtbakmBDUJJhPVn9L/adnExZBXl46ZBT701qUixfqd/s3BpuMyWWUdw==","maximum_merge_delay":86400,"url":"ct.trustasia.com/log1"},
+        {
+            "description": "Google 'Solera2023' log",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEK9Y56IP6DGQy2d9moYGJChZPoktXoYwaG0MBN/4X5MSFmBaYJfNm3mCwzLVefkjh2wz8Q6q2S75hS/OeHGiZUg==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.googleapis.com/logs/solera2023"
+        },
         {
             "description": "Google 'Argon2017' log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEVG18id3qnfC6X/RtYHo3TwIlvxz2b4WurxXfaW7t26maKZfymXYe5jNGHif0vnDdWde6z/7Qco6wVw+dN4liow==",
@@ -66,12 +71,6 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAETeBmZOrzZKo4xYktx9gI2chEce3cw/tbr5xkoQlmhB18aKfsxD+MnILgGNl0FOm0eYGilFVi85wLRIOhK8lxKw==",
             "maximum_merge_delay": 86400,
             "url": "ct.googleapis.com/logs/argon2021"
-        },
-        {
-            "description": "Venafi Gen2 CT log",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEjicnerZVCXTrbEuUhGW85BXx6lrYfA43zro/bAna5ymW00VQb94etBzSg4j/KS/Oqf/fNN51D8DMGA2ULvw3AQ==",
-            "maximum_merge_delay": 86400,
-            "url": "ctlog-gen2.api.venafi.com"
         },
         {
             "description": "Google 'Xenon2020' log",
@@ -146,6 +145,12 @@
             "url": "ct.cloudflare.com/logs/nimbus2021"
         },
         {
+            "description": "TrustAsia CT Log",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEeUeY0SDoUdASOMgFwOFUSkaZ8NoKnknjtbakmBDUJJhPVn9L/adnExZBXl46ZBT701qUixfqd/s3BpuMyWWUdw==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.trustasia.com/log1"
+        },
+        {
             "description": "Google 'Xenon2022' log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE+WS9FSxAYlCVEzg8xyGwOrmPonoV14nWjjETAIdZvLvukPzIWBMKv6tDNlQjpIHNrUcUt1igRPpqoKDXw2MeKw==",
             "maximum_merge_delay": 86400,
@@ -218,12 +223,6 @@
             "url": "mammoth.ct.comodo.com"
         },
         {
-            "description": "Cloudflare 'Nimbus2019' Log",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEkZHz1v5r8a9LmXSMegYZAg4UW+Ug56GtNfJTDNFZuubEJYgWf4FcC5D+ZkYwttXTDSo4OkanG9b3AI4swIQ28g==",
-            "maximum_merge_delay": 86400,
-            "url": "ct.cloudflare.com/logs/nimbus2019"
-        },
-        {
             "description": "Cloudflare 'Nimbus2023' Log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEi/8tkhjLRp0SXrlZdTzNkTd6HqmcmXiDJz3fAdWLgOhjmv4mohvRhwXul9bgW0ODgRwC9UGAgH/vpGHPvIS1qA==",
             "maximum_merge_delay": 86400,
@@ -252,12 +251,6 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE1glwxqXsw2VqlAbHSeWbTthMGNIuACVn8Jj/jrnY2iN2uVUrEEwLj5VUCb+WF2XY44+mfUVYY7R/d8TIZ4olnw==",
             "maximum_merge_delay": 86400,
             "url": "ct.googleapis.com/logs/solera2021"
-        },
-        {
-            "description": "WoTrus",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEe9de7LmmJcJERiLqoBniAD+XENbtmVNjeOhtaK/DF7s8jvp0why9powt4pKSkaZdWO/mjhGWIblq/k4D0gXoSg==",
-            "maximum_merge_delay": 86400,
-            "url": "ctlog.wotrus.com"
         },
         {
             "description": "Google 'Argon2018' log",
