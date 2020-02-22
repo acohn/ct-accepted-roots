@@ -1,12 +1,5 @@
 {
     "logs": [
-    
-            {
-            "description": "Let's Encrypt Oak 2023",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEsz0OeL7jrVxEXJu+o4QWQYLKyokXHiPOOKVUL3/TNFFquVzDSer7kZ3gijxzBp98ZTgRgMSaWgCmZ8OD74mFUQ==",
-            "maximum_merge_delay": 86400,
-            "url": "oak.ct.letsencrypt.org/2023"
-        },
         {
             "description": "Google 'Solera2023' log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEK9Y56IP6DGQy2d9moYGJChZPoktXoYwaG0MBN/4X5MSFmBaYJfNm3mCwzLVefkjh2wz8Q6q2S75hS/OeHGiZUg==",
@@ -300,6 +293,12 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE6Tx2p1yKY4015NyIYvdrk36es0uAc1zA4PQ+TGRY+3ZjUTIYY9Wyu+3q/147JG4vNVKLtDWarZwVqGkg6lAYzA==",
             "maximum_merge_delay": 86400,
             "url": "ct.googleapis.com/logs/argon2020"
+        },
+        {
+            "description": "Let's Encrypt Oak 2023",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEsz0OeL7jrVxEXJu+o4QWQYLKyokXHiPOOKVUL3/TNFFquVzDSer7kZ3gijxzBp98ZTgRgMSaWgCmZ8OD74mFUQ==",
+            "maximum_merge_delay": 86400,
+            "url": "oak.ct.letsencrypt.org/2023"
         },
         {
             "description": "Google 'Skydiver' log",
