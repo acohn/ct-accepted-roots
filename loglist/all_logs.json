@@ -1,9 +1,12 @@
 {
     "logs": [
-	    {"description":"360 2020 log", "key":"MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE+nuP0XjE36o+HfjS9IKnDItCnp3Tn9NafZpJ/8GHvLm+Z/AXY7FuN3L4LPXRrlTydBLt60OqzktHoJ4t4fNodg==","maximum_merge_delay":86400,"url":"ct.browser.360.cn/2020"},
-	    {"description":"360 2021 log", "key":"MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE+nuP0XjE36o+HfjS9IKnDItCnp3Tn9NafZpJ/8GHvLm+Z/AXY7FuN3L4LPXRrlTydBLt60OqzktHoJ4t4fNodg==","maximum_merge_delay":86400,"url":"ct.browser.360.cn/2021"},
-	    {"description":"360 2022 log", "key":"MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE+nuP0XjE36o+HfjS9IKnDItCnp3Tn9NafZpJ/8GHvLm+Z/AXY7FuN3L4LPXRrlTydBLt60OqzktHoJ4t4fNodg==","maximum_merge_delay":86400,"url":"ct.browser.360.cn/2022"},
-	    {"description":"360 2023 log", "key":"MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE+nuP0XjE36o+HfjS9IKnDItCnp3Tn9NafZpJ/8GHvLm+Z/AXY7FuN3L4LPXRrlTydBLt60OqzktHoJ4t4fNodg==","maximum_merge_delay":86400,"url":"ct.browser.360.cn/2023"},
+    
+            {
+            "description": "Let's Encrypt Oak 2023",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEsz0OeL7jrVxEXJu+o4QWQYLKyokXHiPOOKVUL3/TNFFquVzDSer7kZ3gijxzBp98ZTgRgMSaWgCmZ8OD74mFUQ==",
+            "maximum_merge_delay": 86400,
+            "url": "oak.ct.letsencrypt.org/2023"
+        },
         {
             "description": "Google 'Solera2023' log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEK9Y56IP6DGQy2d9moYGJChZPoktXoYwaG0MBN/4X5MSFmBaYJfNm3mCwzLVefkjh2wz8Q6q2S75hS/OeHGiZUg==",
@@ -147,12 +150,6 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAExpon7ipsqehIeU1bmpog9TFo4Pk8+9oN8OYHl1Q2JGVXnkVFnuuvPgSo2Ep+6vLffNLcmEbxOucz03sFiematg==",
             "maximum_merge_delay": 86400,
             "url": "ct.cloudflare.com/logs/nimbus2021"
-        },
-        {
-            "description": "TrustAsia CT Log",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEeUeY0SDoUdASOMgFwOFUSkaZ8NoKnknjtbakmBDUJJhPVn9L/adnExZBXl46ZBT701qUixfqd/s3BpuMyWWUdw==",
-            "maximum_merge_delay": 86400,
-            "url": "ct.trustasia.com/log1"
         },
         {
             "description": "Google 'Xenon2022' log",
