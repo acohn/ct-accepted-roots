@@ -26,6 +26,7 @@ var supportedShards = map[ShardedLogName]*regexp.Regexp{
 	"xenon":  regexp.MustCompile(`^ct\.googleapis\.com/logs/xenon([0-9]{4})$`),
 	"solera": regexp.MustCompile(`^ct\.googleapis\.com/logs/solera([0-9]{4})$`),
 	"oak":    regexp.MustCompile(`^oak\.ct\.letsencrypt\.org/([0-9]{4})$`),
+	"360":    regexp.MustCompile(`^ct.browser.360.cn/([0-9]{4})$`),
 }
 
 type ShardedLogName string
