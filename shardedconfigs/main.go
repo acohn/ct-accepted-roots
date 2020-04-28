@@ -19,14 +19,15 @@ import (
 )
 
 var supportedShards = map[ShardedLogName]*regexp.Regexp{
-	"nimbus": regexp.MustCompile(`^ct\.cloudflare\.com/logs/nimbus([0-9]{4})$`),
-	"yeti":   regexp.MustCompile(`^yeti([0-9]{4})\.ct\.digicert\.com/log$`),
-	"nessie": regexp.MustCompile(`^nessie([0-9]{4})\.ct\.digicert\.com/log$`),
-	"argon":  regexp.MustCompile(`^ct\.googleapis\.com/logs/argon([0-9]{4})$`),
-	"xenon":  regexp.MustCompile(`^ct\.googleapis\.com/logs/xenon([0-9]{4})$`),
-	"solera": regexp.MustCompile(`^ct\.googleapis\.com/logs/solera([0-9]{4})$`),
-	"oak":    regexp.MustCompile(`^oak\.ct\.letsencrypt\.org/([0-9]{4})$`),
-	"360":    regexp.MustCompile(`^ct.browser.360.cn/([0-9]{4})$`),
+	"nimbus":    regexp.MustCompile(`^ct\.cloudflare\.com/logs/nimbus([0-9]{4})$`),
+	"yeti":      regexp.MustCompile(`^yeti([0-9]{4})\.ct\.digicert\.com/log$`),
+	"nessie":    regexp.MustCompile(`^nessie([0-9]{4})\.ct\.digicert\.com/log$`),
+	"argon":     regexp.MustCompile(`^ct\.googleapis\.com/logs/argon([0-9]{4})$`),
+	"xenon":     regexp.MustCompile(`^ct\.googleapis\.com/logs/xenon([0-9]{4})$`),
+	"solera":    regexp.MustCompile(`^ct\.googleapis\.com/logs/solera([0-9]{4})$`),
+	"oak":       regexp.MustCompile(`^oak\.ct\.letsencrypt\.org/([0-9]{4})$`),
+	"360":       regexp.MustCompile(`^ct\.browser\.360\.cn/([0-9]{4})$`),
+	"trustasia": regexp.MustCompile(`^ct\.trustasia\.com/log([0-9]{4})$`),
 }
 
 type ShardedLogName string
