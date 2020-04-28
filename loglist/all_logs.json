@@ -1,6 +1,26 @@
 {
     "logs": [
         {
+            "description": "TrustAsia 2020",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEbsWC7ukn2WYOMxTAcqL8gMRZEQTZF9+Ho1MB9WLhHIaCHpHsJSx0DjJdVILW9mtM5xZtWywMWMQ9/R3OBgQEXQ==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.trustasia.com/log2020"
+        },         {
+            "description": "TrustAsia 2021",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEjwlzYzssDEG4DpPoOS73Ewsdohc0MzaohzRmUz9dih7Z8SHyyviKmnQL1KKfY6VGFnt0ulbVupzGXSaYUAoupA==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.trustasia.com/log2021"
+        },         {
+            "description": "TrustAsia 2022",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEu1LyFs+SC8555lRtwjdTpPX5OqmzBewdvRbsMKwu+HliNRWOGtgWLuRIa/bGE/GWLlwQ/hkeqBi4Dy3DpIZRlw==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.trustasia.com/log2022"
+        },         {
+            "description": "TrustAsia 2023",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEpBFS2xdBTpDUVlESMFL4mwPPTJ/4Lji18Vq6+ji50o8agdqVzDPsIShmxlY+YDYhINnUrF36XBmhBX3+ICP89Q==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.trustasia.com/log2023"
+        }, {
             "description": "Google 'Solera2023' log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEK9Y56IP6DGQy2d9moYGJChZPoktXoYwaG0MBN/4X5MSFmBaYJfNm3mCwzLVefkjh2wz8Q6q2S75hS/OeHGiZUg==",
             "maximum_merge_delay": 86400,
