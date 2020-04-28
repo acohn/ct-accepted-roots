@@ -1,26 +1,6 @@
 {
     "logs": [
         {
-            "description": "TrustAsia 2020",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEbsWC7ukn2WYOMxTAcqL8gMRZEQTZF9+Ho1MB9WLhHIaCHpHsJSx0DjJdVILW9mtM5xZtWywMWMQ9/R3OBgQEXQ==",
-            "maximum_merge_delay": 86400,
-            "url": "ct.trustasia.com/log2020"
-        },         {
-            "description": "TrustAsia 2021",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEjwlzYzssDEG4DpPoOS73Ewsdohc0MzaohzRmUz9dih7Z8SHyyviKmnQL1KKfY6VGFnt0ulbVupzGXSaYUAoupA==",
-            "maximum_merge_delay": 86400,
-            "url": "ct.trustasia.com/log2021"
-        },         {
-            "description": "TrustAsia 2022",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEu1LyFs+SC8555lRtwjdTpPX5OqmzBewdvRbsMKwu+HliNRWOGtgWLuRIa/bGE/GWLlwQ/hkeqBi4Dy3DpIZRlw==",
-            "maximum_merge_delay": 86400,
-            "url": "ct.trustasia.com/log2022"
-        },         {
-            "description": "TrustAsia 2023",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEpBFS2xdBTpDUVlESMFL4mwPPTJ/4Lji18Vq6+ji50o8agdqVzDPsIShmxlY+YDYhINnUrF36XBmhBX3+ICP89Q==",
-            "maximum_merge_delay": 86400,
-            "url": "ct.trustasia.com/log2023"
-        }, {
             "description": "Google 'Solera2023' log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEK9Y56IP6DGQy2d9moYGJChZPoktXoYwaG0MBN/4X5MSFmBaYJfNm3mCwzLVefkjh2wz8Q6q2S75hS/OeHGiZUg==",
             "maximum_merge_delay": 86400,
@@ -73,6 +53,12 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE0JCPZFJOQqyEti5M8j13ALN3CAVHqkVM4yyOcKWCu2yye5yYeqDpEXYoALIgtM3TmHtNlifmt+4iatGwLpF3eA==",
             "maximum_merge_delay": 86400,
             "url": "ct.googleapis.com/logs/argon2023"
+        },
+        {
+            "description": "TrustAsia 2023",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEpBFS2xdBTpDUVlESMFL4mwPPTJ/4Lji18Vq6+ji50o8agdqVzDPsIShmxlY+YDYhINnUrF36XBmhBX3+ICP89Q==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.trustasia.com/log2023"
         },
         {
             "description": "Google 'Rocketeer' log",
@@ -177,6 +163,12 @@
             "url": "ct.cloudflare.com/logs/nimbus2021"
         },
         {
+            "description": "TrustAsia CT Log 1",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEeUeY0SDoUdASOMgFwOFUSkaZ8NoKnknjtbakmBDUJJhPVn9L/adnExZBXl46ZBT701qUixfqd/s3BpuMyWWUdw==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.trustasia.com/log1"
+        },
+        {
             "description": "Google 'Xenon2022' log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE+WS9FSxAYlCVEzg8xyGwOrmPonoV14nWjjETAIdZvLvukPzIWBMKv6tDNlQjpIHNrUcUt1igRPpqoKDXw2MeKw==",
             "maximum_merge_delay": 86400,
@@ -223,6 +215,12 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEI3MQm+HzXvaYa2mVlhB4zknbtAT8cSxakmBoJcBKGqGwYS0bhxSpuvABM1kdBTDpQhXnVdcq+LSiukXJRpGHVg==",
             "maximum_merge_delay": 86400,
             "url": "ct.googleapis.com/logs/argon2019"
+        },
+        {
+            "description": "TrustAsia 2021",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEjwlzYzssDEG4DpPoOS73Ewsdohc0MzaohzRmUz9dih7Z8SHyyviKmnQL1KKfY6VGFnt0ulbVupzGXSaYUAoupA==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.trustasia.com/log2021"
         },
         {
             "description": "Let's Encrypt Oak 2019",
@@ -297,6 +295,12 @@
             "url": "ct.googleapis.com/pilot"
         },
         {
+            "description": "TrustAsia 2020",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEbsWC7ukn2WYOMxTAcqL8gMRZEQTZF9+Ho1MB9WLhHIaCHpHsJSx0DjJdVILW9mtM5xZtWywMWMQ9/R3OBgQEXQ==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.trustasia.com/log2020"
+        },
+        {
             "description": "Google 'Submariner' log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEOfifIGLUV1Voou9JLfA5LZreRLSUMOCeeic8q3Dw0fpRkGMWV0Gtq20fgHQweQJeLVmEByQj9p81uIW4QkWkTw==",
             "maximum_merge_delay": 86400,
@@ -343,6 +347,12 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEEmyGDvYXsRJsNyXSrYc9DjHsIa2xzb4UR7ZxVoV6mrc9iZB7xjI6+NrOiwH+P/xxkRmOFG6Jel20q37hTh58rA==",
             "maximum_merge_delay": 86400,
             "url": "ct.googleapis.com/skydiver"
+        },
+        {
+            "description": "TrustAsia 2022",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEu1LyFs+SC8555lRtwjdTpPX5OqmzBewdvRbsMKwu+HliNRWOGtgWLuRIa/bGE/GWLlwQ/hkeqBi4Dy3DpIZRlw==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.trustasia.com/log2022"
         },
         {
             "description": "Google 'Crucible' log",
