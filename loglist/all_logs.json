@@ -1,6 +1,30 @@
 {
     "logs": [
         {
+            "description": "360 v1 2020",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEDkQZn1WqxqWyWHG86i14qbZ+yk/17Q8SWeubOJw6jQdNJRh4zJwD3mGTZIQge3T6QOgzChWUJA3wYztSx+M/gg==",
+            "maximum_merge_delay": 86400,
+            "url": "https://ct.browser.360.cn/v1/2020"
+        },
+        {
+            "description": "360 v1 2021",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEB1OT52y/+wSUqaHfJh6/BvTD27mlZr6qZddkis7McckOaXx5cU3I/fBx90p3j1tWqEArVuiKmHHAvu82l9Uz2w==",
+            "maximum_merge_delay": 86400,
+            "url": "https://ct.browser.360.cn/v1/2021"
+        },
+        {
+            "description": "360 v1 2022",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEAvqcteHHGEZCE5kSvEpQIPD4fXsEFHYt1/EViSMv7QDtBHTpK94IZSScZLOWk5fpvGIB/6ibVzR5MCW/NSMd/A==",
+            "maximum_merge_delay": 86400,
+            "url": "https://ct.browser.360.cn/v1/2022"
+        },
+        {
+            "description": "360 v1 2023",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEpvIPBkpPfcg4boasja6srvBflgDAznTytKjNWPX151jP/EaRZmNOFBavgBI2oxlQabgYG11YHdwH+FHnyVTaNw==",
+            "maximum_merge_delay": 86400,
+            "url": "https://ct.browser.360.cn/v1/2023"
+        },
+        {
             "description": "Google 'Solera2023' log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEK9Y56IP6DGQy2d9moYGJChZPoktXoYwaG0MBN/4X5MSFmBaYJfNm3mCwzLVefkjh2wz8Q6q2S75hS/OeHGiZUg==",
             "maximum_merge_delay": 86400,
