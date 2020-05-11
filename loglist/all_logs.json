@@ -1,30 +1,6 @@
 {
     "logs": [
         {
-            "description": "360 v1 2020",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEDkQZn1WqxqWyWHG86i14qbZ+yk/17Q8SWeubOJw6jQdNJRh4zJwD3mGTZIQge3T6QOgzChWUJA3wYztSx+M/gg==",
-            "maximum_merge_delay": 86400,
-            "url": "https://ct.browser.360.cn/v1/2020"
-        },
-        {
-            "description": "360 v1 2021",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEB1OT52y/+wSUqaHfJh6/BvTD27mlZr6qZddkis7McckOaXx5cU3I/fBx90p3j1tWqEArVuiKmHHAvu82l9Uz2w==",
-            "maximum_merge_delay": 86400,
-            "url": "https://ct.browser.360.cn/v1/2021"
-        },
-        {
-            "description": "360 v1 2022",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEAvqcteHHGEZCE5kSvEpQIPD4fXsEFHYt1/EViSMv7QDtBHTpK94IZSScZLOWk5fpvGIB/6ibVzR5MCW/NSMd/A==",
-            "maximum_merge_delay": 86400,
-            "url": "https://ct.browser.360.cn/v1/2022"
-        },
-        {
-            "description": "360 v1 2023",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEpvIPBkpPfcg4boasja6srvBflgDAznTytKjNWPX151jP/EaRZmNOFBavgBI2oxlQabgYG11YHdwH+FHnyVTaNw==",
-            "maximum_merge_delay": 86400,
-            "url": "https://ct.browser.360.cn/v1/2023"
-        },
-        {
             "description": "Google 'Solera2023' log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEK9Y56IP6DGQy2d9moYGJChZPoktXoYwaG0MBN/4X5MSFmBaYJfNm3mCwzLVefkjh2wz8Q6q2S75hS/OeHGiZUg==",
             "maximum_merge_delay": 86400,
@@ -109,6 +85,12 @@
             "url": "ct.googleapis.com/logs/argon2021"
         },
         {
+            "description": "Let's Encrypt 'Testflume2021' log",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEdCLoJNt1QcNa7sNDp7g7oTJ+o/UIYEM6N/IZWT+dhdqtJZC+AODJ/4exdOwG04B4K6WrN1VB2ELKQIc/wU1lCw==",
+            "maximum_merge_delay": 86400,
+            "url": "testflume.ct.letsencrypt.org/2021"
+        },
+        {
             "description": "Google 'Xenon2020' log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEZU75VqjyzSTgFZKAnWg1QeYfFFIRZTMK7q3kWWZsmHhQdrBYnHRZ3OA4kUeUx0JN+xX+dSgt1ruqUhhl7jOvmw==",
             "maximum_merge_delay": 86400,
@@ -143,6 +125,12 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEn/jYHd77W1G1+131td5mEbCdX/1v/KiYW5hPLcOROvv+xA8Nw2BDjB7y+RGyutD2vKXStp/5XIeiffzUfdYTJg==",
             "maximum_merge_delay": 86400,
             "url": "yeti2022.ct.digicert.com/log"
+        },
+        {
+            "description": "Let's Encrypt 'Testflume2022' log",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEjy/rXcABuf0yhrm1+XgjDnh4XPD7vfMoyJOyT+KA+c2zuXVR98yQmp/Bl5ZFdGFwJuFcVrCw7IDo0EGKs7UCww==",
+            "maximum_merge_delay": 86400,
+            "url": "testflume.ct.letsencrypt.org/2022"
         },
         {
             "description": "Google 'Icarus' log",
@@ -199,6 +187,18 @@
             "url": "ct.googleapis.com/logs/xenon2022"
         },
         {
+            "description": "360 v1 2021",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEB1OT52y/+wSUqaHfJh6/BvTD27mlZr6qZddkis7McckOaXx5cU3I/fBx90p3j1tWqEArVuiKmHHAvu82l9Uz2w==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.browser.360.cn/v1/2021"
+        },
+        {
+            "description": "360 v1 2022",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEAvqcteHHGEZCE5kSvEpQIPD4fXsEFHYt1/EViSMv7QDtBHTpK94IZSScZLOWk5fpvGIB/6ibVzR5MCW/NSMd/A==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.browser.360.cn/v1/2022"
+        },
+        {
             "description": "DigiCert Nessie 2022",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEJyTdaAMoy/5jvg4RR019F2ihEV1McclBKMe2okuX7MCv/C87v+nxsfz1Af+p+0lADGMkmNd5LqZVqxbGvlHYcQ==",
             "maximum_merge_delay": 86400,
@@ -209,6 +209,12 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEEuFqn5cy1nACARlWIUjeJaRDKl0mcf9gvFZXpPhHsyykizXvULF5GZNGfucWIyUccBRfmYJZTTrXqw0mVts7hA==",
             "maximum_merge_delay": 86400,
             "url": "ct.googleapis.com/logs/solera2018"
+        },
+        {
+            "description": "Let's Encrypt 'Testflume2023' log",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE8aLpnumqeISmQEB3hKPgtPJQG3jP2IftfaUQ4WPUihNBwUOEk1R9BMg5RGQwebWSsRlGIRiCvtE97Q45Vh3mqA==",
+            "maximum_merge_delay": 86400,
+            "url": "testflume.ct.letsencrypt.org/2023"
         },
         {
             "description": "Comodo 'Sabre' CT log",
@@ -289,10 +295,10 @@
             "url": "ct.googleapis.com/logs/xenon2021"
         },
         {
-            "description": "DigiCert Log Server 2",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzF05L2a4TH/BLgOhNKPoioYCrkoRxvcmajeb8Dj4XQmNY+gxa4Zmz3mzJTwe33i0qMVp+rfwgnliQ/bM/oFmhA==",
+            "description": "Let's Encrypt 'Testflume2019' log",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEAg3+vFOesFW51rKECekioAt9Zo50atRoOJ0qLxF7DIEHsHneXLEpgO1WMreleRy1vEbUJD7TXoH9r8qSDGvyew==",
             "maximum_merge_delay": 86400,
-            "url": "ct2.digicert-ct.com/log"
+            "url": "testflume.ct.letsencrypt.org/2019"
         },
         {
             "description": "Let's Encrypt Oak 2021",
@@ -361,6 +367,12 @@
             "url": "ct.googleapis.com/logs/argon2020"
         },
         {
+            "description": "360 v1 2023",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEpvIPBkpPfcg4boasja6srvBflgDAznTytKjNWPX151jP/EaRZmNOFBavgBI2oxlQabgYG11YHdwH+FHnyVTaNw==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.browser.360.cn/v1/2023"
+        },
+        {
             "description": "Let's Encrypt Oak 2023",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEsz0OeL7jrVxEXJu+o4QWQYLKyokXHiPOOKVUL3/TNFFquVzDSer7kZ3gijxzBp98ZTgRgMSaWgCmZ8OD74mFUQ==",
             "maximum_merge_delay": 86400,
@@ -389,6 +401,18 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAESYlKFDLLFmA9JScaiaNnqlU8oWDytxIYMfswHy9Esg0aiX+WnP/yj4O0ViEHtLwbmOQeSWBGkIu9YK9CLeer+g==",
             "maximum_merge_delay": 86400,
             "url": "yeti2018.ct.digicert.com/log"
+        },
+        {
+            "description": "360 v1 2020",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEDkQZn1WqxqWyWHG86i14qbZ+yk/17Q8SWeubOJw6jQdNJRh4zJwD3mGTZIQge3T6QOgzChWUJA3wYztSx+M/gg==",
+            "maximum_merge_delay": 86400,
+            "url": "ct.browser.360.cn/v1/2020"
+        },
+        {
+            "description": "Let's Encrypt 'Testflume2020' log",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEjdjcoKpeBShHgHvRm3BxD5+l+eHZudv3KmD5SDcLcI01Vj5TDTmxanQKCgpvm9pfnfB6URMQV3hhU1I02jRoRw==",
+            "maximum_merge_delay": 86400,
+            "url": "testflume.ct.letsencrypt.org/2020"
         },
         {
             "description": "DigiCert Nessie 2020",

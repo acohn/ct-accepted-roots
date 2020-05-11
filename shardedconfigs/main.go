@@ -28,6 +28,8 @@ var supportedShards = map[ShardedLogName]*regexp.Regexp{
 	"oak":       regexp.MustCompile(`^oak\.ct\.letsencrypt\.org/([0-9]{4})$`),
 	"360":       regexp.MustCompile(`^ct\.browser\.360\.cn/([0-9]{4})$`),
 	"trustasia": regexp.MustCompile(`^ct\.trustasia\.com/log([0-9]{4})$`),
+	"360v1":     regexp.MustCompile(`^ct\.browser\.360\.cn/v1/([0-9]{4})$`),
+	"testflume": regexp.MustCompile(`^testflume\.ct\.letsencrypt\.org/([0-9]{4})$`),
 }
 
 type ShardedLogName string
