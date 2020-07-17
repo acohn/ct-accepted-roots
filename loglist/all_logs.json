@@ -13,12 +13,6 @@
             "url": "ct.googleapis.com/logs/argon2017"
         },
         {
-            "description": "DigiCert Nessie 2019",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEX+0nudCKImd7QCtelhMrDW0OXni5RE10tiiClZesmrwUk2iHLCoTHHVV+yg5D4n/rxCRVyRhikPpVDOLMLxJaA==",
-            "maximum_merge_delay": 86400,
-            "url": "nessie2019.ct.digicert.com/log"
-        },
-        {
             "description": "Comodo 'Dodo' CT log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAELPXCMfVjQ2oWSgrewu4fIW4Sfh3lco90CwKZ061pvAI1eflh6c8ACE90pKM0muBDHCN+j0HV7scco4KKQPqq4A==",
             "maximum_merge_delay": 86400,
@@ -35,12 +29,6 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEBQLIGtQH3merk2OMO2LbKU2TFroKxaChr4+FxB5UMLYTspqEJKcD7mRXEObHJ6PI/39UvEI98N4Cyf9x2rKvqg==",
             "maximum_merge_delay": 86400,
             "url": "ct.browser.360.cn/2023"
-        },
-        {
-            "description": "DigiCert Yeti 2019",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEkZd/ow8X+FSVWAVSf8xzkFohcPph/x6pS1JHh7g1wnCZ5y/8Hk6jzJxs6t3YMAWz2CPd4VkCdxwKexGhcFxD9A==",
-            "maximum_merge_delay": 86400,
-            "url": "yeti2019.ct.digicert.com/log"
         },
         {
             "description": "Let's Encrypt Oak 2020",
@@ -271,12 +259,6 @@
             "url": "ct.googleapis.com/logs/solera2022"
         },
         {
-            "description": "DigiCert Nessie 2018",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEVqpLa2W+Rz1XDZPBIyKJO+KKFOYZTj9MpJWnZeFUqzc5aivOiWEVhs8Gy2AlH3irWPFjIZPZMs3Dv7M+0LbPyQ==",
-            "maximum_merge_delay": 86400,
-            "url": "nessie2018.ct.digicert.com/log"
-        },
-        {
             "description": "Comodo 'Mammoth' CT log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE7+R9dC4VFbbpuyOL+yy14ceAmEf7QGlo/EmtYU6DRzwat43f/3swtLr/L8ugFOOt1YU/RFmMjGCL17ixv66MZw==",
             "maximum_merge_delay": 86400,
@@ -395,12 +377,6 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEKATl2B3SAbxyzGOfNRB+AytNTGvdF/FFY6HzWb+/HPE4lJ37vx2nEm99KYUy9SoNzF5VyTwCQG5nL/c5Q77yQQ==",
             "maximum_merge_delay": 86400,
             "url": "ct.googleapis.com/logs/crucible"
-        },
-        {
-            "description": "DigiCert Yeti 2018",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAESYlKFDLLFmA9JScaiaNnqlU8oWDytxIYMfswHy9Esg0aiX+WnP/yj4O0ViEHtLwbmOQeSWBGkIu9YK9CLeer+g==",
-            "maximum_merge_delay": 86400,
-            "url": "yeti2018.ct.digicert.com/log"
         },
         {
             "description": "360 v1 2020",
