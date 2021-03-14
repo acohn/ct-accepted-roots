@@ -277,12 +277,6 @@
             "url": "ct.googleapis.com/logs/xenon2021"
         },
         {
-            "description": "Let's Encrypt 'Testflume2019' log",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEAg3+vFOesFW51rKECekioAt9Zo50atRoOJ0qLxF7DIEHsHneXLEpgO1WMreleRy1vEbUJD7TXoH9r8qSDGvyew==",
-            "maximum_merge_delay": 86400,
-            "url": "testflume.ct.letsencrypt.org/2019"
-        },
-        {
             "description": "Let's Encrypt Oak 2021",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAELsYzGMNwo8rBIlaklBIdmD2Ofn6HkfrjK0Ukz1uOIUC6Lm0jTITCXhoIdjs7JkyXnwuwYiJYiH7sE1YeKu8k9w==",
             "maximum_merge_delay": 86400,
@@ -307,16 +301,16 @@
             "url": "ct.googleapis.com/pilot"
         },
         {
-            "description": "TrustAsia 2020",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEbsWC7ukn2WYOMxTAcqL8gMRZEQTZF9+Ho1MB9WLhHIaCHpHsJSx0DjJdVILW9mtM5xZtWywMWMQ9/R3OBgQEXQ==",
-            "maximum_merge_delay": 86400,
-            "url": "ct.trustasia.com/log2020"
-        },
-        {
             "description": "Google 'Submariner' log",
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEOfifIGLUV1Voou9JLfA5LZreRLSUMOCeeic8q3Dw0fpRkGMWV0Gtq20fgHQweQJeLVmEByQj9p81uIW4QkWkTw==",
             "maximum_merge_delay": 86400,
             "url": "ct.googleapis.com/submariner"
+        },
+        {
+            "description": "Trust Asia CT2021",
+            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAESdAfC+h1SZNsSARs188n/dCiNYjGSgkT7avLYe1mmXJzzHhsmxmAorHtOzhDkFgaCSCrUPrXdunK946eyIeSmA==",
+            "maximum_merge_delay": 86400,
+            "url": "ct2021.trustasia.com/log2021"
         },
         {
             "description": "Google 'Xenon2023' log",
@@ -383,12 +377,6 @@
             "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEDkQZn1WqxqWyWHG86i14qbZ+yk/17Q8SWeubOJw6jQdNJRh4zJwD3mGTZIQge3T6QOgzChWUJA3wYztSx+M/gg==",
             "maximum_merge_delay": 86400,
             "url": "ct.browser.360.cn/v1/2020"
-        },
-        {
-            "description": "Let's Encrypt 'Testflume2020' log",
-            "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEjdjcoKpeBShHgHvRm3BxD5+l+eHZudv3KmD5SDcLcI01Vj5TDTmxanQKCgpvm9pfnfB6URMQV3hhU1I02jRoRw==",
-            "maximum_merge_delay": 86400,
-            "url": "testflume.ct.letsencrypt.org/2020"
         },
         {
             "description": "DigiCert Nessie 2020",
